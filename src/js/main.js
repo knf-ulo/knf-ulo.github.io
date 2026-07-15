@@ -6,6 +6,7 @@ if (menuToggle && navShell) {
   menuToggle.addEventListener("click", () => {
     const isOpen = navShell.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 
   // Close the mobile menu after tapping a nav link (incl. in-page anchors)
@@ -13,6 +14,7 @@ if (menuToggle && navShell) {
     link.addEventListener("click", () => {
       navShell.classList.remove("open");
       menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open menu");
     });
   });
 }

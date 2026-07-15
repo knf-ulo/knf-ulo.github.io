@@ -349,6 +349,38 @@ body {
   display: none;
 }
 
+.menu-toggle svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: none;
+  stroke: #222;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.menu-toggle .mt-line {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.15s ease;
+}
+
+.menu-toggle[aria-expanded="true"] .mt-top {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .mt-mid {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .mt-bot {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+[data-theme="dark"] .menu-toggle svg {
+  stroke: #c9d1d9;
+}
+
 /* ── Main layout ─────────────────────────────────────────────── */
 
 main {
@@ -873,7 +905,8 @@ main {
   }
 
   .menu-toggle {
-    display: inline-block;
+    display: grid;
+    place-items: center;
     justify-self: end;
     width: 38px;
     height: 34px;
@@ -886,18 +919,6 @@ main {
   [data-theme="dark"] .menu-toggle {
     background: var(--pill);
     border-color: var(--pill-border);
-  }
-
-  [data-theme="dark"] .menu-toggle span {
-    background: #c9d1d9;
-  }
-
-  .menu-toggle span {
-    display: block;
-    width: 16px;
-    height: 2px;
-    background: #222;
-    margin: 3px auto;
   }
 
   .nav-shell {
