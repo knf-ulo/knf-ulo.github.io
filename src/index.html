@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KNF Koło Naukowe — projektujemy pierwszy bolid Formuły Student od zera, opierając każdą decyzję na fizyce i rzetelnej inżynierii." />
-  <title>KNF — Formuła Studencka</title>
+  <meta name="description" content="KNF Physics Club — we are designing our first Formula Student car from scratch, grounding every decision in physics and rigorous engineering." data-pl="KNF Koło Naukowe — projektujemy pierwszy bolid Formuły Student od zera, opierając każdą decyzję na fizyce i rzetelnej inżynierii." data-en="KNF Physics Club — we are designing our first Formula Student car from scratch, grounding every decision in physics and rigorous engineering." />
+  <title data-pl="KNF — Formuła Student" data-en="KNF — Formula Student">KNF — Formula Student</title>
+  <script>
+    // Apply saved theme/language before first paint to avoid a flash
+    (function () {
+      try {
+        var t = localStorage.getItem("knf-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+        var l = localStorage.getItem("knf-lang");
+        if (l) document.documentElement.setAttribute("lang", l);
+      } catch (e) { /* storage unavailable */ }
+    })();
+  </script>
+  <meta name="theme-color" content="#f2f0ec">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,23 +25,23 @@
 </head>
 <body>
   <header class="page-header">
-    <nav class="top-nav" aria-label="Nawigacja główna">
-      <a class="brand" href="#" aria-label="KNF strona główna">Knf<sup>®</sup></a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="KNF home">Knf<sup>®</sup></a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Otwórz menu">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
       <div class="nav-shell" id="nav-links">
-        <a href="#" class="nav-link" data-pl="Strona główna" data-en="Home">Home</a>
-        <a href="./gallery.html" class="nav-link" data-pl="Galeria" data-en="Gallery">Galeria</a>
-        <a href="./formula-student.html" class="nav-link" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
-        <a href="./contact.html" class="nav-link" data-pl="Kontakt" data-en="Contact">Kontakt</a>
+        <a href="#home" class="nav-link active" data-pl="Strona główna" data-en="Home">Home</a>
+        <a href="./gallery.html" class="nav-link" data-pl="Galeria" data-en="Gallery">Gallery</a>
+        <a href="./formula-student.html" class="nav-link" data-pl="Formuła Student" data-en="Formula Student">Formula Student</a>
+        <a href="./contact.html" class="nav-link" data-pl="Kontakt" data-en="Contact">Contact</a>
 
         <div class="settings-wrap">
-          <button class="settings-btn" type="button" aria-label="Ustawienia" aria-expanded="false" aria-controls="settings-dropdown">
+          <button class="settings-btn" type="button" aria-label="Settings" aria-expanded="false" aria-controls="settings-dropdown">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 6h8"></path>
               <path d="M16 6h4"></path>
@@ -45,24 +57,24 @@
 
           <div class="settings-dropdown" id="settings-dropdown" hidden>
             <div class="settings-row">
-              <span class="settings-label" data-pl="Motyw" data-en="Theme">Motyw</span>
+              <span class="settings-label" data-pl="Motyw" data-en="Theme">Theme</span>
               <div class="settings-toggle">
-                <button class="toggle-btn" data-theme-val="light" data-pl="Jasny" data-en="Light">Jasny</button>
-                <button class="toggle-btn" data-theme-val="dark" data-pl="Ciemny" data-en="Dark">Ciemny</button>
+                <button class="toggle-btn" type="button" data-theme-val="light" data-pl="Jasny" data-en="Light">Light</button>
+                <button class="toggle-btn" type="button" data-theme-val="dark" data-pl="Ciemny" data-en="Dark">Dark</button>
               </div>
             </div>
             <div class="settings-row">
-              <span class="settings-label" data-pl="Język" data-en="Language">Język</span>
+              <span class="settings-label" data-pl="Język" data-en="Language">Language</span>
               <div class="settings-toggle">
-                <button class="toggle-btn" data-lang-val="pl">PL</button>
-                <button class="toggle-btn" data-lang-val="en">EN</button>
+                <button class="toggle-btn" type="button" data-lang-val="pl">PL</button>
+                <button class="toggle-btn" type="button" data-lang-val="en">EN</button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="socials" aria-label="Media społecznościowe">
+      <div class="socials" aria-label="Social media">
         <a href="https://www.instagram.com/knf_ulo" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.4" ry="4.4"></rect>
@@ -81,67 +93,67 @@
       </div>
 
       <div class="hero-content">
-        <p class="hero-kicker" data-pl="Koło Naukowe" data-en="Physics Club">Koło Naukowe</p>
-        <h1 data-pl="Jeszcze bez auta. Już na pełnym gazie." data-en="No car yet. Already flat out.">Jeszcze bez auta. Już na pełnym gazie.</h1>
-        <p data-pl="Projektujemy pierwszy bolid Formuły Student od zera — każda decyzja oparta na obliczeniach, każda iteracja bliżej toru." data-en="We're designing our first Formula Student car from scratch — every decision grounded in calculation, every iteration closer to the track.">Projektujemy pierwszy bolid Formuły Student od zera — każda decyzja oparta na obliczeniach, każda iteracja bliżej toru.</p>
-        <a href="#projects" class="hero-cta" data-pl="Poznaj projekty" data-en="See Our Work">Poznaj projekty</a>
+        <p class="hero-kicker" data-pl="Koło Naukowe" data-en="Physics Club">Physics Club</p>
+        <h1 data-pl="Jeszcze bez auta. Już na pełnym gazie." data-en="No car yet. Already flat out.">No car yet. Already flat out.</h1>
+        <p data-pl="Projektujemy pierwszy bolid Formuły Student od zera — każda decyzja oparta na obliczeniach, każda iteracja bliżej toru." data-en="We're designing our first Formula Student car from scratch — every decision grounded in calculation, every iteration closer to the track.">We're designing our first Formula Student car from scratch — every decision grounded in calculation, every iteration closer to the track.</p>
+        <a href="#projects" class="hero-cta" data-pl="Poznaj projekty" data-en="See Our Work">See Our Work</a>
       </div>
     </section>
 
     <section class="projects-section" id="projects">
       <div class="projects-inner">
         <header class="projects-header">
-          <p class="projects-kicker" data-pl="Aktualnie" data-en="Active">Aktualnie</p>
-          <h2 data-pl="Projekty" data-en="Projects">Projekty</h2>
-          <p data-pl="Nasze aktywne obszary inżynierskie — od podsystemów bolidu po badania własne." data-en="Our active engineering areas — from car subsystems to independent research.">Nasze aktywne obszary inżynierskie — od podsystemów bolidu po badania własne.</p>
+          <p class="projects-kicker" data-pl="Aktualnie" data-en="Active">Active</p>
+          <h2 data-pl="Projekty" data-en="Projects">Projects</h2>
+          <p data-pl="Nasze aktywne obszary inżynierskie — od podsystemów bolidu po badania własne." data-en="Our active engineering areas — from car subsystems to independent research.">Our active engineering areas — from car subsystems to independent research.</p>
           <div class="projects-links-group">
-            <a href="./gallery.html" class="projects-page-link" data-pl="Galeria zdjęć" data-en="Photo Gallery">Galeria zdjęć</a>
-            <a href="./formula-student.html" class="projects-page-link projects-page-link--ghost" data-pl="Nasz projekt FS" data-en="Our FS Project">Nasz projekt FS</a>
+            <a href="./gallery.html" class="projects-page-link" data-pl="Galeria zdjęć" data-en="Photo Gallery">Photo Gallery</a>
+            <a href="./formula-student.html" class="projects-page-link projects-page-link--ghost" data-pl="Nasz projekt FS" data-en="Our FS Project">Our FS Project</a>
           </div>
         </header>
 
         <ol class="projects-list">
           <li class="project-entry">
             <span class="pe-num">01</span>
-            <span class="pe-title" data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamika</span>
-            <span class="pe-desc" data-pl="Projektujemy pakiet aero bolidu Formuły Student — skrzydło przednie, dyfuzor tylny i elementy nadwozia — przy użyciu symulacji CFD. Iterujemy geometrię profili, analizujemy docisk i opory w różnych konfiguracjach, a każda zmiana jest weryfikowana ilościowo przed przejściem do kolejnej wersji." data-en="We design the Formula Student aero package — front wing, rear diffuser and bodywork — using CFD simulation. We iterate aerofoil geometry, analyse downforce and drag across configurations, and every change is verified quantitatively before moving to the next revision.">Projektujemy pakiet aero bolidu Formuły Student — skrzydło przednie, dyfuzor tylny i elementy nadwozia — przy użyciu symulacji CFD. Iterujemy geometrię profili, analizujemy docisk i opory w różnych konfiguracjach, a każda zmiana jest weryfikowana ilościowo przed przejściem do kolejnej wersji.</span>
+            <span class="pe-title" data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamics</span>
+            <span class="pe-desc" data-pl="Projektujemy pakiet aero bolidu Formuły Student — skrzydło przednie, dyfuzor tylny i elementy nadwozia — przy użyciu symulacji CFD. Iterujemy geometrię profili, analizujemy docisk i opory w różnych konfiguracjach, a każda zmiana jest weryfikowana ilościowo przed przejściem do kolejnej wersji." data-en="We design the Formula Student aero package — front wing, rear diffuser and bodywork — using CFD simulation. We iterate aerofoil geometry, analyse downforce and drag across configurations, and every change is verified quantitatively before moving to the next revision.">We design the Formula Student aero package — front wing, rear diffuser and bodywork — using CFD simulation. We iterate aerofoil geometry, analyse downforce and drag across configurations, and every change is verified quantitatively before moving to the next revision.</span>
           </li>
           <li class="project-entry">
             <span class="pe-num">02</span>
-            <span class="pe-title" data-pl="Podwozie i Napęd" data-en="Chassis &amp; Powertrain">Podwozie i Napęd</span>
-            <span class="pe-desc" data-pl="Rama przestrzenna ze stali Cr-Mo projektowana z użyciem analizy MES pod kątem sztywności skrętnej i odporności na zderzenie boczne zgodnie z regulaminem FSG. Równolegle dobieramy jednostkę napędową, skrzynię biegów i układ chłodzenia — każda decyzja ważona masą, niezawodnością i zgodnością z przepisami." data-en="A Cr-Mo space frame designed with FEA for torsional stiffness and side-impact resistance per the FSG rulebook. In parallel we select the engine, gearbox and cooling system — every decision weighted by mass, reliability and regulatory compliance.">Rama przestrzenna ze stali Cr-Mo projektowana z użyciem analizy MES pod kątem sztywności skrętnej i odporności na zderzenie boczne zgodnie z regulaminem FSG. Równolegle dobieramy jednostkę napędową, skrzynię biegów i układ chłodzenia — każda decyzja ważona masą, niezawodnością i zgodnością z przepisami.</span>
+            <span class="pe-title" data-pl="Podwozie i Napęd" data-en="Chassis &amp; Powertrain">Chassis &amp; Powertrain</span>
+            <span class="pe-desc" data-pl="Rama przestrzenna ze stali Cr-Mo projektowana z użyciem analizy MES pod kątem sztywności skrętnej i odporności na zderzenie boczne zgodnie z regulaminem FSG. Równolegle dobieramy jednostkę napędową, skrzynię biegów i układ chłodzenia — każda decyzja ważona masą, niezawodnością i zgodnością z przepisami." data-en="A Cr-Mo space frame designed with FEA for torsional stiffness and side-impact resistance per the FSG rulebook. In parallel we select the engine, gearbox and cooling system — every decision weighted by mass, reliability and regulatory compliance.">A Cr-Mo space frame designed with FEA for torsional stiffness and side-impact resistance per the FSG rulebook. In parallel we select the engine, gearbox and cooling system — every decision weighted by mass, reliability and regulatory compliance.</span>
           </li>
           <li class="project-entry">
             <span class="pe-num">03</span>
-            <span class="pe-title" data-pl="Oprogramowanie" data-en="Software">Oprogramowanie</span>
-            <span class="pe-desc" data-pl="Tworzymy własne narzędzia inżynierskie — skrypty do analizy danych telemetrycznych, pulpit wizualizacji sensorów na żywo oraz skrypty automatyzujące powtarzalne obliczenia projektowe. Celem jest skrócenie pętli iteracyjnej: wynik pomiaru powinien trafiać do kolejnej decyzji projektowej w minuty, nie dni." data-en="We build our own engineering tools — scripts for analysing telemetry data, a live sensor visualisation dashboard, and scripts that automate repetitive design calculations. The goal is to tighten the iteration loop: a measurement result should feed the next design decision in minutes, not days.">Tworzymy własne narzędzia inżynierskie — skrypty do analizy danych telemetrycznych, pulpit wizualizacji sensorów na żywo oraz skrypty automatyzujące powtarzalne obliczenia projektowe. Celem jest skrócenie pętli iteracyjnej: wynik pomiaru powinien trafiać do kolejnej decyzji projektowej w minuty, nie dni.</span>
+            <span class="pe-title" data-pl="Oprogramowanie" data-en="Software">Software</span>
+            <span class="pe-desc" data-pl="Tworzymy własne narzędzia inżynierskie — skrypty do analizy danych telemetrycznych, pulpit wizualizacji sensorów na żywo oraz skrypty automatyzujące powtarzalne obliczenia projektowe. Celem jest skrócenie pętli iteracyjnej: wynik pomiaru powinien trafiać do kolejnej decyzji projektowej w minuty, nie dni." data-en="We build our own engineering tools — scripts for analysing telemetry data, a live sensor visualisation dashboard, and scripts that automate repetitive design calculations. The goal is to tighten the iteration loop: a measurement result should feed the next design decision in minutes, not days.">We build our own engineering tools — scripts for analysing telemetry data, a live sensor visualisation dashboard, and scripts that automate repetitive design calculations. The goal is to tighten the iteration loop: a measurement result should feed the next design decision in minutes, not days.</span>
           </li>
           <li class="project-entry">
             <span class="pe-num">04</span>
-            <span class="pe-title" data-pl="Badania Materiałowe" data-en="Materials Research">Badania Materiałowe</span>
-            <span class="pe-desc" data-pl="Prowadzimy własne testy materiałów i czujników niezwiązane bezpośrednio z bieżącą konstrukcją bolidu. Badamy właściwości zmęczeniowe połączeń spawanych, kalibrujemy czujniki siły i ugięcia oraz weryfikujemy dane katalogowe dostawców na własnych stanowiskach. Wyniki zasilają bazę wiedzy, którą wykorzystamy przy kolejnych generacjach bolidu." data-en="We run our own material and sensor tests independent of the current car build. We test fatigue properties of welded joints, calibrate force and deflection sensors, and verify supplier datasheet claims on our own rigs. The results feed a knowledge base we will draw on for future car generations.">Prowadzimy własne testy materiałów i czujników niezwiązane bezpośrednio z bieżącą konstrukcją bolidu. Badamy właściwości zmęczeniowe połączeń spawanych, kalibrujemy czujniki siły i ugięcia oraz weryfikujemy dane katalogowe dostawców na własnych stanowiskach. Wyniki zasilają bazę wiedzy, którą wykorzystamy przy kolejnych generacjach bolidu.</span>
+            <span class="pe-title" data-pl="Badania Materiałowe" data-en="Materials Research">Materials Research</span>
+            <span class="pe-desc" data-pl="Prowadzimy własne testy materiałów i czujników niezwiązane bezpośrednio z bieżącą konstrukcją bolidu. Badamy właściwości zmęczeniowe połączeń spawanych, kalibrujemy czujniki siły i ugięcia oraz weryfikujemy dane katalogowe dostawców na własnych stanowiskach. Wyniki zasilają bazę wiedzy, którą wykorzystamy przy kolejnych generacjach bolidu." data-en="We run our own material and sensor tests independent of the current car build. We test fatigue properties of welded joints, calibrate force and deflection sensors, and verify supplier datasheet claims on our own rigs. The results feed a knowledge base we will draw on for future car generations.">We run our own material and sensor tests independent of the current car build. We test fatigue properties of welded joints, calibrate force and deflection sensors, and verify supplier datasheet claims on our own rigs. The results feed a knowledge base we will draw on for future car generations.</span>
           </li>
         </ol>
       </div>
     </section>
 
     <section class="about-section" id="about">
-      <div class="team-blueprint" aria-label="Manifest zespołu">
-        <h2 data-pl="Nasz Zespół" data-en="The Team">Nasz Zespół</h2>
-        <p class="team-mission" data-pl="Jesteśmy studentami inżynierii z pasją do przesuwania granic tego, co studencki projekt może osiągnąć — budujemy pierwszy bolid od zera i kładziemy fundamenty dla następnego pokolenia inżynierów motorsportu." data-en="We are engineering students passionate about pushing the boundaries of what a university team can build — designing our first car from scratch, and laying the groundwork for the next generation of motorsport engineers.">Jesteśmy studentami inżynierii z pasją do przesuwania granic tego, co studencki projekt może osiągnąć — budujemy pierwszy bolid od zera i kładziemy fundamenty dla następnego pokolenia inżynierów motorsportu.</p>
+      <div class="team-blueprint" aria-label="Team manifesto">
+        <h2 data-pl="Nasz Zespół" data-en="The Team">The Team</h2>
+        <p class="team-mission" data-pl="Jesteśmy studentami inżynierii z pasją do przesuwania granic tego, co studencki projekt może osiągnąć — budujemy pierwszy bolid od zera i kładziemy fundamenty dla następnego pokolenia inżynierów motorsportu." data-en="We are engineering students passionate about pushing the boundaries of what a university team can build — designing our first car from scratch, and laying the groundwork for the next generation of motorsport engineers.">We are engineering students passionate about pushing the boundaries of what a university team can build — designing our first car from scratch, and laying the groundwork for the next generation of motorsport engineers.</p>
 
         <div class="team-list">
           <article class="team-row no-photo">
             <div class="team-text">
-              <h3><span>01</span> <span data-pl="Rzetelność" data-en="Integrity">Rzetelność</span></h3>
-              <p data-pl="Każda decyzja projektowa jest oparta na danych. Dokumentujemy założenia, weryfikujemy obliczenia i dzielimy się wynikami — nawet gdy pokazują błąd. Rzetelność to dla nas traktowanie własnych niedociągnięć jako materiału do pracy, nie powodu do wstydu." data-en="Every design decision is grounded in data. We document assumptions, verify calculations, and share results — even when they show a mistake. Integrity means treating our own shortcomings as material to work with, not reasons for embarrassment.">Każda decyzja projektowa jest oparta na danych. Dokumentujemy założenia, weryfikujemy obliczenia i dzielimy się wynikami — nawet gdy pokazują błąd. Rzetelność to dla nas traktowanie własnych niedociągnięć jako materiału do pracy, nie powodu do wstydu.</p>
+              <h3><span>01</span> <span data-pl="Rzetelność" data-en="Integrity">Integrity</span></h3>
+              <p data-pl="Każda decyzja projektowa jest oparta na danych. Dokumentujemy założenia, weryfikujemy obliczenia i dzielimy się wynikami — nawet gdy pokazują błąd. Rzetelność to dla nas traktowanie własnych niedociągnięć jako materiału do pracy, nie powodu do wstydu." data-en="Every design decision is grounded in data. We document assumptions, verify calculations, and share results — even when they show a mistake. Integrity means treating our own shortcomings as material to work with, not reasons for embarrassment.">Every design decision is grounded in data. We document assumptions, verify calculations, and share results — even when they show a mistake. Integrity means treating our own shortcomings as material to work with, not reasons for embarrassment.</p>
             </div>
           </article>
 
           <article class="team-row">
             <div class="team-text">
-              <h3><span>02</span> <span data-pl="Niezawodność" data-en="Reliability">Niezawodność</span></h3>
-              <p data-pl="Bolid, który nie kończy przejazdu, nie jest szybki. Każdy podsystem projektujemy pod kątem powtarzalności, łatwości serwisu i odporności na warunki zawodowe. Naszym celem jest zero awarii technicznych — nie jako hasło, lecz jako mierzalny cel inżynierski." data-en="A car that doesn't finish the run isn't fast. Every subsystem is designed for repeatability, ease of service, and resilience under competition conditions. Our target is zero mechanical failures — not as a slogan, but as a measurable engineering goal.">Bolid, który nie kończy przejazdu, nie jest szybki. Każdy podsystem projektujemy pod kątem powtarzalności, łatwości serwisu i odporności na warunki zawodowe. Naszym celem jest zero awarii technicznych — nie jako hasło, lecz jako mierzalny cel inżynierski.</p>
+              <h3><span>02</span> <span data-pl="Niezawodność" data-en="Reliability">Reliability</span></h3>
+              <p data-pl="Bolid, który nie kończy przejazdu, nie jest szybki. Każdy podsystem projektujemy pod kątem powtarzalności, łatwości serwisu i odporności na warunki zawodowe. Naszym celem jest zero awarii technicznych — nie jako hasło, lecz jako mierzalny cel inżynierski." data-en="A car that doesn't finish the run isn't fast. Every subsystem is designed for repeatability, ease of service, and resilience under competition conditions. Our target is zero mechanical failures — not as a slogan, but as a measurable engineering goal.">A car that doesn't finish the run isn't fast. Every subsystem is designed for repeatability, ease of service, and resilience under competition conditions. Our target is zero mechanical failures — not as a slogan, but as a measurable engineering goal.</p>
             </div>
             <div class="team-shot">
               <img src="./assets/team-0.png" alt="Zespół KNF przy pracy" loading="lazy">
@@ -150,22 +162,22 @@
 
           <article class="team-row no-photo team-row-03">
             <div class="team-text">
-              <h3><span>03</span> <span data-pl="Precyzja" data-en="Precision">Precyzja</span></h3>
-              <p data-pl="Tolerancja to nie formalność — to różnica między projektem, który działa, a tym, który zawodzi. Od CAD-u po stanowisko testowe pilnujemy każdej liczby. Wyniki porównujemy z symulacjami i wprowadzamy do następnej iteracji." data-en="A tolerance is not a formality — it is the difference between a design that works and one that fails. From CAD to the test bench, we track every number. Results are compared against simulations and fed into the next iteration.">Tolerancja to nie formalność — to różnica między projektem, który działa, a tym, który zawodzi. Od CAD-u po stanowisko testowe pilnujemy każdej liczby. Wyniki porównujemy z symulacjami i wprowadzamy do następnej iteracji.</p>
+              <h3><span>03</span> <span data-pl="Precyzja" data-en="Precision">Precision</span></h3>
+              <p data-pl="Tolerancja to nie formalność — to różnica między projektem, który działa, a tym, który zawodzi. Od CAD-u po stanowisko testowe pilnujemy każdej liczby. Wyniki porównujemy z symulacjami i wprowadzamy do następnej iteracji." data-en="A tolerance is not a formality — it is the difference between a design that works and one that fails. From CAD to the test bench, we track every number. Results are compared against simulations and fed into the next iteration.">A tolerance is not a formality — it is the difference between a design that works and one that fails. From CAD to the test bench, we track every number. Results are compared against simulations and fed into the next iteration.</p>
             </div>
           </article>
 
           <article class="team-row no-photo">
             <div class="team-text">
-              <h3><span>04</span> <span data-pl="Praca Zespołowa" data-en="Teamwork">Praca Zespołowa</span></h3>
-              <p data-pl="Aerodynamika nie istnieje bez podwozia. Napęd bez telemetrii jest ślepy. Pracujemy jako jeden system — z regularnymi przeglądami integracji, jasnym podziałem odpowiedzialności i kulturą, w której problem zgłaszany jest wcześnie, a nie ukrywany." data-en="Aerodynamics does not exist without the chassis. Powertrain without telemetry is blind. We work as one system — with regular integration reviews, clear ownership, and a culture where problems are raised early, not buried.">Aerodynamika nie istnieje bez podwozia. Napęd bez telemetrii jest ślepy. Pracujemy jako jeden system — z regularnymi przeglądami integracji, jasnym podziałem odpowiedzialności i kulturą, w której problem zgłaszany jest wcześnie, a nie ukrywany.</p>
+              <h3><span>04</span> <span data-pl="Praca Zespołowa" data-en="Teamwork">Teamwork</span></h3>
+              <p data-pl="Aerodynamika nie istnieje bez podwozia. Napęd bez telemetrii jest ślepy. Pracujemy jako jeden system — z regularnymi przeglądami integracji, jasnym podziałem odpowiedzialności i kulturą, w której problem zgłaszany jest wcześnie, a nie ukrywany." data-en="Aerodynamics does not exist without the chassis. Powertrain without telemetry is blind. We work as one system — with regular integration reviews, clear ownership, and a culture where problems are raised early, not buried.">Aerodynamics does not exist without the chassis. Powertrain without telemetry is blind. We work as one system — with regular integration reviews, clear ownership, and a culture where problems are raised early, not buried.</p>
             </div>
           </article>
 
           <article class="team-row">
             <div class="team-text">
-              <h3><span>05</span> <span data-pl="Ambicja" data-en="Ambition">Ambicja</span></h3>
-              <p data-pl="Nasz pierwszy bolid jeszcze nie istnieje, ale harmonogram, obliczenia i decyzje projektowe — już tak. Budujemy nie tylko samochód, lecz fundamenty zespołu, który będzie lepszy od nas samych." data-en="Our first car doesn't exist yet, but the schedule, calculations, and design decisions do. We're building not just a car, but the foundation of a team that will be better than ourselves.">Nasz pierwszy bolid jeszcze nie istnieje, ale harmonogram, obliczenia i decyzje projektowe — już tak. Budujemy nie tylko samochód, lecz fundamenty zespołu, który będzie lepszy od nas samych.</p>
+              <h3><span>05</span> <span data-pl="Ambicja" data-en="Ambition">Ambition</span></h3>
+              <p data-pl="Nasz pierwszy bolid jeszcze nie istnieje, ale harmonogram, obliczenia i decyzje projektowe — już tak. Budujemy nie tylko samochód, lecz fundamenty zespołu, który będzie lepszy od nas samych." data-en="Our first car doesn't exist yet, but the schedule, calculations, and design decisions do. We're building not just a car, but the foundation of a team that will be better than ourselves.">Our first car doesn't exist yet, but the schedule, calculations, and design decisions do. We're building not just a car, but the foundation of a team that will be better than ourselves.</p>
             </div>
             <div class="team-shot">
               <img src="./assets/team-1.png" alt="Zespół KNF podczas przeglądu projektu" loading="lazy">
@@ -179,13 +191,13 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand-col">
-        <a class="brand footer-brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
-        <p class="footer-tagline" data-pl="Formuła Student — od podstaw." data-en="Formula Student — from scratch.">Formuła Student — od podstaw.</p>
+        <a class="brand footer-brand" href="./index.html" aria-label="KNF home">Knf<sup>®</sup></a>
+        <p class="footer-tagline" data-pl="Formuła Student — od podstaw." data-en="Formula Student — from scratch.">Formula Student — from scratch.</p>
       </div>
-      <nav class="footer-nav" aria-label="Nawigacja w stopce">
-        <a href="./gallery.html" data-pl="Galeria" data-en="Gallery">Galeria</a>
-        <a href="./formula-student.html" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
-        <a href="./contact.html" data-pl="Kontakt" data-en="Contact">Kontakt</a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="./gallery.html" data-pl="Galeria" data-en="Gallery">Gallery</a>
+        <a href="./formula-student.html" data-pl="Formuła Student" data-en="Formula Student">Formula Student</a>
+        <a href="./contact.html" data-pl="Kontakt" data-en="Contact">Contact</a>
       </nav>
       <p class="footer-copy">© 2026 KNF Koło Naukowe</p>
     </div>

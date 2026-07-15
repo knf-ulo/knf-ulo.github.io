@@ -7,6 +7,14 @@ if (menuToggle && navShell) {
     const isOpen = navShell.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
+
+  // Close the mobile menu after tapping a nav link (incl. in-page anchors)
+  navShell.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      navShell.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
 }
 
 // ── Settings dropdown ─────────────────────────────────────────
@@ -43,8 +51,12 @@ const THEME_KEY = "knf-theme";
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem(THEME_KEY, theme);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", theme === "dark" ? "#0e1117" : "#f2f0ec");
   document.querySelectorAll("[data-theme-val]").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.themeVal === theme);
+    const on = btn.dataset.themeVal === theme;
+    btn.classList.toggle("active", on);
+    btn.setAttribute("aria-pressed", String(on));
   });
 }
 
@@ -61,10 +73,15 @@ function applyLang(lang) {
   document.documentElement.setAttribute("lang", lang);
   localStorage.setItem(LANG_KEY, lang);
   document.querySelectorAll("[data-en]").forEach(el => {
-    el.textContent = el.dataset[lang] || el.dataset.en;
+    const val = el.dataset[lang] || el.dataset.en;
+    // <meta> has no visible text — localize its content attribute instead
+    if (el.tagName === "META") el.setAttribute("content", val);
+    else el.textContent = val;
   });
   document.querySelectorAll("[data-lang-val]").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.langVal === lang);
+    const on = btn.dataset.langVal === lang;
+    btn.classList.toggle("active", on);
+    btn.setAttribute("aria-pressed", String(on));
   });
 }
 
@@ -100,6 +117,12 @@ applyLang(localStorage.getItem(LANG_KEY) || "en");
 
   const all = document.querySelectorAll(".reveal");
   if (!all.length) return;
+
+  // Fallback: if IntersectionObserver is unavailable, reveal everything now
+  if (!("IntersectionObserver" in window)) {
+    all.forEach(el => el.classList.add("visible"));
+    return;
+  }
 
   const revealObs = new IntersectionObserver(entries => {
     entries.forEach(e => {

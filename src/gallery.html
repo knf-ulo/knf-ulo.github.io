@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Galeria KNF — dokumentacja wizualna procesu projektowania bolidu Formuły Studenckiej." />
-  <title>Galeria | KNF</title>
+  <meta name="description" content="KNF gallery — a visual record of designing our Formula Student car." data-pl="Galeria KNF — dokumentacja wizualna procesu projektowania bolidu Formuły Student." data-en="KNF gallery — a visual record of designing our Formula Student car." />
+  <title data-pl="Galeria | KNF" data-en="Gallery | KNF">Gallery | KNF</title>
+  <script>
+    // Apply saved theme/language before first paint to avoid a flash
+    (function () {
+      try {
+        var t = localStorage.getItem("knf-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+        var l = localStorage.getItem("knf-lang");
+        if (l) document.documentElement.setAttribute("lang", l);
+      } catch (e) { /* storage unavailable */ }
+    })();
+  </script>
+  <meta name="theme-color" content="#f2f0ec">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +25,10 @@
 </head>
 <body>
   <header class="page-header">
-    <nav class="top-nav" aria-label="Nawigacja główna">
-      <a class="brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="brand" href="./index.html" aria-label="KNF home">Knf<sup>®</sup></a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Otwórz menu">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
@@ -24,12 +36,12 @@
 
       <div class="nav-shell" id="nav-links">
         <a href="./index.html" class="nav-link" data-pl="Strona główna" data-en="Home">Home</a>
-        <a href="./gallery.html" class="nav-link active" data-pl="Galeria" data-en="Gallery">Galeria</a>
-        <a href="./formula-student.html" class="nav-link" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
-        <a href="./contact.html" class="nav-link" data-pl="Kontakt" data-en="Contact">Kontakt</a>
+        <a href="./gallery.html" class="nav-link active" data-pl="Galeria" data-en="Gallery">Gallery</a>
+        <a href="./formula-student.html" class="nav-link" data-pl="Formuła Student" data-en="Formula Student">Formula Student</a>
+        <a href="./contact.html" class="nav-link" data-pl="Kontakt" data-en="Contact">Contact</a>
 
         <div class="settings-wrap">
-          <button class="settings-btn" type="button" aria-label="Ustawienia" aria-expanded="false" aria-controls="settings-dropdown">
+          <button class="settings-btn" type="button" aria-label="Settings" aria-expanded="false" aria-controls="settings-dropdown">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 6h8"></path>
               <path d="M16 6h4"></path>
@@ -45,24 +57,24 @@
 
           <div class="settings-dropdown" id="settings-dropdown" hidden>
             <div class="settings-row">
-              <span class="settings-label" data-pl="Motyw" data-en="Theme">Motyw</span>
+              <span class="settings-label" data-pl="Motyw" data-en="Theme">Theme</span>
               <div class="settings-toggle">
-                <button class="toggle-btn" data-theme-val="light" data-pl="Jasny" data-en="Light">Jasny</button>
-                <button class="toggle-btn" data-theme-val="dark" data-pl="Ciemny" data-en="Dark">Ciemny</button>
+                <button class="toggle-btn" type="button" data-theme-val="light" data-pl="Jasny" data-en="Light">Light</button>
+                <button class="toggle-btn" type="button" data-theme-val="dark" data-pl="Ciemny" data-en="Dark">Dark</button>
               </div>
             </div>
             <div class="settings-row">
-              <span class="settings-label" data-pl="Język" data-en="Language">Język</span>
+              <span class="settings-label" data-pl="Język" data-en="Language">Language</span>
               <div class="settings-toggle">
-                <button class="toggle-btn" data-lang-val="pl">PL</button>
-                <button class="toggle-btn" data-lang-val="en">EN</button>
+                <button class="toggle-btn" type="button" data-lang-val="pl">PL</button>
+                <button class="toggle-btn" type="button" data-lang-val="en">EN</button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="socials" aria-label="Media społecznościowe">
+      <div class="socials" aria-label="Social media">
         <a href="https://www.instagram.com/knf_ulo" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.4" ry="4.4"></rect>
@@ -85,11 +97,11 @@
 
     <section class="gallery-section">
       <div class="gallery-filters">
-        <button class="gallery-filter active" data-pl="Wszystkie" data-en="All">All</button>
-        <button class="gallery-filter" data-category="render" data-pl="Bolid" data-en="Full Car">Bolid</button>
-        <button class="gallery-filter" data-category="aero" data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamics</button>
-        <button class="gallery-filter" data-category="chassis" data-pl="Podwozie" data-en="Chassis">Chassis</button>
-        <button class="gallery-filter" data-category="team" data-pl="Zespół" data-en="Team">Team</button>
+        <button class="gallery-filter active" type="button" aria-pressed="true" data-pl="Wszystkie" data-en="All">All</button>
+        <button class="gallery-filter" type="button" aria-pressed="false" data-category="render" data-pl="Bolid" data-en="Full Car">Full Car</button>
+        <button class="gallery-filter" type="button" aria-pressed="false" data-category="aero" data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamics</button>
+        <button class="gallery-filter" type="button" aria-pressed="false" data-category="chassis" data-pl="Podwozie" data-en="Chassis">Chassis</button>
+        <button class="gallery-filter" type="button" aria-pressed="false" data-category="team" data-pl="Zespół" data-en="Team">Team</button>
       </div>
 
       <div class="gallery-grid">
@@ -159,10 +171,10 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand-col">
-        <a class="brand footer-brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
+        <a class="brand footer-brand" href="./index.html" aria-label="KNF home">Knf<sup>®</sup></a>
         <p class="footer-tagline" data-pl="Formuła Student — od podstaw." data-en="Formula Student — from scratch.">Formula Student — from scratch.</p>
       </div>
-      <nav class="footer-nav" aria-label="Nawigacja w stopce">
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="./gallery.html" data-pl="Galeria" data-en="Gallery">Gallery</a>
         <a href="./formula-student.html" data-pl="Formuła Student" data-en="Formula Student">Formula Student</a>
         <a href="./contact.html" data-pl="Kontakt" data-en="Contact">Contact</a>
@@ -179,8 +191,12 @@
 
       filters.forEach(btn => {
         btn.addEventListener("click", () => {
-          filters.forEach(b => b.classList.remove("active"));
+          filters.forEach(b => {
+            b.classList.remove("active");
+            b.setAttribute("aria-pressed", "false");
+          });
           btn.classList.add("active");
+          btn.setAttribute("aria-pressed", "true");
 
           const cat = btn.dataset.category;
           items.forEach(item => {

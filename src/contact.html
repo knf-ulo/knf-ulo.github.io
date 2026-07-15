@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Skontaktuj się z KNF — dołącz do zespołu lub zostań partnerem projektu Formuły Student." />
-  <title>Kontakt | KNF</title>
+  <meta name="description" content="Contact KNF — join the team or become a partner of our Formula Student project." data-pl="Skontaktuj się z KNF — dołącz do zespołu lub zostań partnerem projektu Formuły Student." data-en="Contact KNF — join the team or become a partner of our Formula Student project." />
+  <title data-pl="Kontakt | KNF" data-en="Contact | KNF">Contact | KNF</title>
+  <script>
+    // Apply saved theme/language before first paint to avoid a flash
+    (function () {
+      try {
+        var t = localStorage.getItem("knf-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+        var l = localStorage.getItem("knf-lang");
+        if (l) document.documentElement.setAttribute("lang", l);
+      } catch (e) { /* storage unavailable */ }
+    })();
+  </script>
+  <meta name="theme-color" content="#f2f0ec">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +25,10 @@
 </head>
 <body>
   <header class="page-header">
-    <nav class="top-nav" aria-label="Nawigacja główna">
-      <a class="brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="brand" href="./index.html" aria-label="KNF home">Knf<sup>®</sup></a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Otwórz menu">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
@@ -24,12 +36,12 @@
 
       <div class="nav-shell" id="nav-links">
         <a href="./index.html" class="nav-link" data-pl="Strona główna" data-en="Home">Home</a>
-        <a href="./gallery.html" class="nav-link" data-pl="Galeria" data-en="Gallery">Galeria</a>
-        <a href="./formula-student.html" class="nav-link" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
-        <a href="./contact.html" class="nav-link active" data-pl="Kontakt" data-en="Contact">Kontakt</a>
+        <a href="./gallery.html" class="nav-link" data-pl="Galeria" data-en="Gallery">Gallery</a>
+        <a href="./formula-student.html" class="nav-link" data-pl="Formuła Student" data-en="Formula Student">Formula Student</a>
+        <a href="./contact.html" class="nav-link active" data-pl="Kontakt" data-en="Contact">Contact</a>
 
         <div class="settings-wrap">
-          <button class="settings-btn" type="button" aria-label="Ustawienia" aria-expanded="false" aria-controls="settings-dropdown">
+          <button class="settings-btn" type="button" aria-label="Settings" aria-expanded="false" aria-controls="settings-dropdown">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 6h8"></path>
               <path d="M16 6h4"></path>
@@ -45,24 +57,24 @@
 
           <div class="settings-dropdown" id="settings-dropdown" hidden>
             <div class="settings-row">
-              <span class="settings-label" data-pl="Motyw" data-en="Theme">Motyw</span>
+              <span class="settings-label" data-pl="Motyw" data-en="Theme">Theme</span>
               <div class="settings-toggle">
-                <button class="toggle-btn" data-theme-val="light" data-pl="Jasny" data-en="Light">Jasny</button>
-                <button class="toggle-btn" data-theme-val="dark" data-pl="Ciemny" data-en="Dark">Ciemny</button>
+                <button class="toggle-btn" type="button" data-theme-val="light" data-pl="Jasny" data-en="Light">Light</button>
+                <button class="toggle-btn" type="button" data-theme-val="dark" data-pl="Ciemny" data-en="Dark">Dark</button>
               </div>
             </div>
             <div class="settings-row">
-              <span class="settings-label" data-pl="Język" data-en="Language">Język</span>
+              <span class="settings-label" data-pl="Język" data-en="Language">Language</span>
               <div class="settings-toggle">
-                <button class="toggle-btn" data-lang-val="pl">PL</button>
-                <button class="toggle-btn" data-lang-val="en">EN</button>
+                <button class="toggle-btn" type="button" data-lang-val="pl">PL</button>
+                <button class="toggle-btn" type="button" data-lang-val="en">EN</button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="socials" aria-label="Media społecznościowe">
+      <div class="socials" aria-label="Social media">
         <a href="https://www.instagram.com/knf_ulo" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.4" ry="4.4"></rect>
@@ -77,16 +89,16 @@
   <main>
     <section class="subpage-hero">
       <div class="subpage-hero-inner">
-        <p class="hero-kicker" data-pl="KNF — Kontakt" data-en="KNF — Contact">KNF — Kontakt</p>
-        <h1 data-pl="Skontaktuj się z nami" data-en="Get in Touch">Skontaktuj się z nami</h1>
-        <p data-pl="Masz pytania o nasz projekt, chcesz dołączyć do zespołu lub zostać partnerem? Chętnie odpiszemy." data-en="Have questions about our project, want to join the team, or interested in partnership? We'd love to hear from you.">Masz pytania o nasz projekt, chcesz dołączyć do zespołu lub zostać partnerem? Chętnie odpiszemy.</p>
+        <p class="hero-kicker" data-pl="KNF — Kontakt" data-en="KNF — Contact">KNF — Contact</p>
+        <h1 data-pl="Skontaktuj się z nami" data-en="Get in Touch">Get in Touch</h1>
+        <p data-pl="Masz pytania o nasz projekt, chcesz dołączyć do zespołu lub zostać partnerem? Chętnie odpiszemy." data-en="Have questions about our project, want to join the team, or interested in partnership? We'd love to hear from you.">Have questions about our project, want to join the team, or interested in partnership? We'd love to hear from you.</p>
       </div>
     </section>
 
     <section class="fs-section">
-      <p class="fs-section-label" data-pl="Kontakt bezpośredni" data-en="Direct contact">Kontakt bezpośredni</p>
-      <h2 data-pl="Napisz do nas" data-en="Reach us">Napisz do nas</h2>
-      <p data-pl="Napisz bezpośrednio na nasz adres e-mail lub odwiedź nasz profil na Instagramie." data-en="Write directly to our email address or visit our Instagram profile.">Napisz bezpośrednio na nasz adres e-mail lub odwiedź nasz profil na Instagramie.</p>
+      <p class="fs-section-label" data-pl="Kontakt bezpośredni" data-en="Direct contact">Direct contact</p>
+      <h2 data-pl="Napisz do nas" data-en="Reach us">Reach us</h2>
+      <p data-pl="Napisz bezpośrednio na nasz adres e-mail lub odwiedź nasz profil na Instagramie." data-en="Write directly to our email address or visit our Instagram profile.">Write directly to our email address or visit our Instagram profile.</p>
 
       <div class="contact-links">
         <a href="mailto:knf.pitstopfizyki@pozytywneinicjatywy.pl" class="contact-link">
@@ -115,21 +127,21 @@
     <hr class="fs-divider">
 
     <section class="fs-section">
-      <p class="fs-section-label" data-pl="Zaangażuj się" data-en="Get Involved">Zaangażuj się</p>
-      <h2 data-pl="Jak możesz się zaangażować?" data-en="How to get involved?">Jak możesz się zaangażować?</h2>
-      <p data-pl="Szukamy zarówno studentów z pasją do inżynierii, jak i partnerów, którzy chcą wspierać nasz projekt i inwestować w młode talenty." data-en="We're looking for both students passionate about engineering and partners who want to support our project and invest in young talent.">Szukamy zarówno studentów z pasją do inżynierii, jak i partnerów, którzy chcą wspierać nasz projekt i inwestować w młode talenty.</p>
+      <p class="fs-section-label" data-pl="Zaangażuj się" data-en="Get Involved">Get Involved</p>
+      <h2 data-pl="Jak możesz się zaangażować?" data-en="How to get involved?">How to get involved?</h2>
+      <p data-pl="Szukamy zarówno studentów z pasją do inżynierii, jak i partnerów, którzy chcą wspierać nasz projekt i inwestować w młode talenty." data-en="We're looking for both students passionate about engineering and partners who want to support our project and invest in young talent.">We're looking for both students passionate about engineering and partners who want to support our project and invest in young talent.</p>
 
       <div class="fs-grid">
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="Dla studentów" data-en="For students">Dla studentów</span>
-          <h3 data-pl="Dołącz do zespołu" data-en="Join the Team">Dołącz do zespołu</h3>
-          <p data-pl="Szukamy studentów z pasją do inżynierii. Aerodynamika, elektronika, oprogramowanie, zarządzanie — każde kompetencje mają u nas miejsce. Nie wymagamy doświadczenia — wymagamy zaangażowania i chęci do nauki." data-en="We're always looking for passionate students to join our engineering team. Aerodynamics, electronics, software, management — there's a place for every skill set. No prior experience required, just commitment and willingness to learn.">Szukamy studentów z pasją do inżynierii. Aerodynamika, elektronika, oprogramowanie, zarządzanie — każde kompetencje mają u nas miejsce. Nie wymagamy doświadczenia — wymagamy zaangażowania i chęci do nauki.</p>
+          <span class="fs-card-num" data-pl="Dla studentów" data-en="For students">For students</span>
+          <h3 data-pl="Dołącz do zespołu" data-en="Join the Team">Join the Team</h3>
+          <p data-pl="Szukamy studentów z pasją do inżynierii. Aerodynamika, elektronika, oprogramowanie, zarządzanie — każde kompetencje mają u nas miejsce. Nie wymagamy doświadczenia — wymagamy zaangażowania i chęci do nauki." data-en="We're always looking for passionate students to join our engineering team. Aerodynamics, electronics, software, management — there's a place for every skill set. No prior experience required, just commitment and willingness to learn.">We're always looking for passionate students to join our engineering team. Aerodynamics, electronics, software, management — there's a place for every skill set. No prior experience required, just commitment and willingness to learn.</p>
         </div>
 
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="Dla firm" data-en="For companies">Dla firm</span>
-          <h3 data-pl="Zostań partnerem" data-en="Partner With Us">Zostań partnerem</h3>
-          <p data-pl="Wesprzyj następne pokolenie inżynierów motorsportu. Zostając partnerem KNF, zyskujesz obecność w środowisku Formuły Student i inwestujesz w młode talenty z wydziału fizyki — na długo przed ich wejściem na rynek pracy." data-en="Support the next generation of motorsport engineers. Partner with KNF and gain visibility in the Formula Student community while investing in young talent from the physics faculty — long before they enter the job market.">Wesprzyj następne pokolenie inżynierów motorsportu. Zostając partnerem KNF, zyskujesz obecność w środowisku Formuły Student i inwestujesz w młode talenty z wydziału fizyki — na długo przed ich wejściem na rynek pracy.</p>
+          <span class="fs-card-num" data-pl="Dla firm" data-en="For companies">For companies</span>
+          <h3 data-pl="Zostań partnerem" data-en="Partner With Us">Partner With Us</h3>
+          <p data-pl="Wesprzyj następne pokolenie inżynierów motorsportu. Zostając partnerem KNF, zyskujesz obecność w środowisku Formuły Student i inwestujesz w młode talenty z wydziału fizyki — na długo przed ich wejściem na rynek pracy." data-en="Support the next generation of motorsport engineers. Partner with KNF and gain visibility in the Formula Student community while investing in young talent from the physics faculty — long before they enter the job market.">Support the next generation of motorsport engineers. Partner with KNF and gain visibility in the Formula Student community while investing in young talent from the physics faculty — long before they enter the job market.</p>
         </div>
       </div>
     </section>
@@ -138,13 +150,13 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand-col">
-        <a class="brand footer-brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
-        <p class="footer-tagline" data-pl="Formuła Student — od podstaw." data-en="Formula Student — from scratch.">Formuła Student — od podstaw.</p>
+        <a class="brand footer-brand" href="./index.html" aria-label="KNF home">Knf<sup>®</sup></a>
+        <p class="footer-tagline" data-pl="Formuła Student — od podstaw." data-en="Formula Student — from scratch.">Formula Student — from scratch.</p>
       </div>
-      <nav class="footer-nav" aria-label="Nawigacja w stopce">
-        <a href="./gallery.html" data-pl="Galeria" data-en="Gallery">Galeria</a>
-        <a href="./formula-student.html" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
-        <a href="./contact.html" data-pl="Kontakt" data-en="Contact">Kontakt</a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="./gallery.html" data-pl="Galeria" data-en="Gallery">Gallery</a>
+        <a href="./formula-student.html" data-pl="Formuła Student" data-en="Formula Student">Formula Student</a>
+        <a href="./contact.html" data-pl="Kontakt" data-en="Contact">Contact</a>
       </nav>
       <p class="footer-copy">© 2026 KNF Koło Naukowe</p>
     </div>

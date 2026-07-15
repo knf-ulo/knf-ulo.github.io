@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KNF buduje pierwszy bolid Formuły Student od zera — nasz plan, postęp i cele." />
-  <title>Formuła Student | KNF</title>
+  <meta name="description" content="KNF is building its first Formula Student car from scratch — our plan, progress and goals." data-pl="KNF buduje pierwszy bolid Formuły Student od zera — nasz plan, postęp i cele." data-en="KNF is building its first Formula Student car from scratch — our plan, progress and goals." />
+  <title data-pl="Formuła Student | KNF" data-en="Formula Student | KNF">Formula Student | KNF</title>
+  <script>
+    // Apply saved theme/language before first paint to avoid a flash
+    (function () {
+      try {
+        var t = localStorage.getItem("knf-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+        var l = localStorage.getItem("knf-lang");
+        if (l) document.documentElement.setAttribute("lang", l);
+      } catch (e) { /* storage unavailable */ }
+    })();
+  </script>
+  <meta name="theme-color" content="#f2f0ec">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +25,10 @@
 </head>
 <body>
   <header class="page-header">
-    <nav class="top-nav" aria-label="Nawigacja główna">
-      <a class="brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="brand" href="./index.html" aria-label="KNF home">Knf<sup>®</sup></a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Otwórz menu">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
@@ -24,12 +36,12 @@
 
       <div class="nav-shell" id="nav-links">
         <a href="./index.html" class="nav-link" data-pl="Strona główna" data-en="Home">Home</a>
-        <a href="./gallery.html" class="nav-link" data-pl="Galeria" data-en="Gallery">Galeria</a>
-        <a href="./formula-student.html" class="nav-link active" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
-        <a href="./contact.html" class="nav-link" data-pl="Kontakt" data-en="Contact">Kontakt</a>
+        <a href="./gallery.html" class="nav-link" data-pl="Galeria" data-en="Gallery">Gallery</a>
+        <a href="./formula-student.html" class="nav-link active" data-pl="Formuła Student" data-en="Formula Student">Formula Student</a>
+        <a href="./contact.html" class="nav-link" data-pl="Kontakt" data-en="Contact">Contact</a>
 
         <div class="settings-wrap">
-          <button class="settings-btn" type="button" aria-label="Ustawienia" aria-expanded="false" aria-controls="settings-dropdown">
+          <button class="settings-btn" type="button" aria-label="Settings" aria-expanded="false" aria-controls="settings-dropdown">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 6h8"></path>
               <path d="M16 6h4"></path>
@@ -45,24 +57,24 @@
 
           <div class="settings-dropdown" id="settings-dropdown" hidden>
             <div class="settings-row">
-              <span class="settings-label" data-pl="Motyw" data-en="Theme">Motyw</span>
+              <span class="settings-label" data-pl="Motyw" data-en="Theme">Theme</span>
               <div class="settings-toggle">
-                <button class="toggle-btn" data-theme-val="light" data-pl="Jasny" data-en="Light">Jasny</button>
-                <button class="toggle-btn" data-theme-val="dark" data-pl="Ciemny" data-en="Dark">Ciemny</button>
+                <button class="toggle-btn" type="button" data-theme-val="light" data-pl="Jasny" data-en="Light">Light</button>
+                <button class="toggle-btn" type="button" data-theme-val="dark" data-pl="Ciemny" data-en="Dark">Dark</button>
               </div>
             </div>
             <div class="settings-row">
-              <span class="settings-label" data-pl="Język" data-en="Language">Język</span>
+              <span class="settings-label" data-pl="Język" data-en="Language">Language</span>
               <div class="settings-toggle">
-                <button class="toggle-btn" data-lang-val="pl">PL</button>
-                <button class="toggle-btn" data-lang-val="en">EN</button>
+                <button class="toggle-btn" type="button" data-lang-val="pl">PL</button>
+                <button class="toggle-btn" type="button" data-lang-val="en">EN</button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="socials" aria-label="Media społecznościowe">
+      <div class="socials" aria-label="Social media">
         <a href="https://www.instagram.com/knf_ulo" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.4" ry="4.4"></rect>
@@ -77,45 +89,45 @@
   <main>
     <section class="subpage-hero">
       <div class="subpage-hero-inner">
-        <p class="hero-kicker" data-pl="KNF — Nasz projekt" data-en="KNF — Our project">KNF — Nasz projekt</p>
-        <h1 data-pl="Budujemy bolid. Od zera." data-en="Building the car. From scratch.">Budujemy bolid. Od zera.</h1>
-        <p data-pl="Pierwszy bolid Formuły Student KNF — projektowany przez studentów, oparty na obliczeniach." data-en="KNF's first Formula Student car — designed by students, grounded in calculation.">Pierwszy bolid Formuły Student KNF — projektowany przez studentów, oparty na obliczeniach.</p>
+        <p class="hero-kicker" data-pl="KNF — Nasz projekt" data-en="KNF — Our project">KNF — Our project</p>
+        <h1 data-pl="Budujemy bolid. Od zera." data-en="Building the car. From scratch.">Building the car. From scratch.</h1>
+        <p data-pl="Pierwszy bolid Formuły Student KNF — projektowany przez studentów, oparty na obliczeniach." data-en="KNF's first Formula Student car — designed by students, grounded in calculation.">KNF's first Formula Student car — designed by students, grounded in calculation.</p>
       </div>
     </section>
 
     <section class="fs-section">
-      <p class="fs-section-label" data-pl="Wprowadzenie" data-en="Introduction">Wprowadzenie</p>
-      <h2 data-pl="Czym jest Formuła Student?" data-en="What is Formula Student?">Czym jest Formuła Student?</h2>
-      <p data-pl="Formula Student to największe na świecie zawody inżynierskie dla studentów, organizowane przez SAE International i IMechE. Zespoły projektują i budują jednomiejscowe bolidy wyścigowe, rywalizując w eventach dynamicznych na torze — przyspieszenie, slalom, wytrzymałość — oraz w przeglądach projektowych i technicznych przed inżynierami z całego świata motorsportu." data-en="Formula Student is the world's largest engineering competition for university students, organized by SAE International and IMechE. Teams design and build single-seat race cars, competing in dynamic events on track — acceleration, autocross, endurance — and in design reviews and scrutineering before industry engineers from across the motorsport world.">Formula Student to największe na świecie zawody inżynierskie dla studentów, organizowane przez SAE International i IMechE. Zespoły projektują i budują jednomiejscowe bolidy wyścigowe, rywalizując w eventach dynamicznych na torze — przyspieszenie, slalom, wytrzymałość — oraz w przeglądach projektowych i technicznych przed inżynierami z całego świata motorsportu.</p>
-      <p data-pl="Zawody nie wyłaniają najszybszego bolidu — wyłaniają najlepiej zaprojektowany. Zespoły prezentują doskonałość inżynierską, zmysł biznesowy i umiejętności za kierownicą na torach na całym świecie — a eventy statyczne: Design Event, Cost Report i Business Plan — mają równie duże znaczenie jak wyniki na trasie." data-en="The competition does not pick the fastest car — it picks the best-engineered one. Teams showcase engineering excellence, business acumen and driving skills on circuits across the globe, with static events — Design, Cost Report, Business Plan — carrying equal weight alongside performance on track.">Zawody nie wyłaniają najszybszego bolidu — wyłaniają najlepiej zaprojektowany. Zespoły prezentują doskonałość inżynierską, zmysł biznesowy i umiejętności za kierownicą na torach na całym świecie — a eventy statyczne: Design Event, Cost Report i Business Plan — mają równie duże znaczenie jak wyniki na trasie.</p>
-      <div class="projects-links-group" style="margin-top: 8px;">
-        <a href="https://fs-poland.pl/pl/strona-glowna/" target="_blank" rel="noopener" class="projects-page-link projects-page-link--ghost" data-pl="Formuła Student Polska ↗" data-en="Formula Student Poland ↗">Formuła Student Polska ↗</a>
+      <p class="fs-section-label" data-pl="Wprowadzenie" data-en="Introduction">Introduction</p>
+      <h2 data-pl="Czym jest Formuła Student?" data-en="What is Formula Student?">What is Formula Student?</h2>
+      <p data-pl="Formula Student to największe na świecie zawody inżynierskie dla studentów, organizowane przez SAE International i IMechE. Zespoły projektują i budują jednomiejscowe bolidy wyścigowe, rywalizując w eventach dynamicznych na torze — przyspieszenie, slalom, wytrzymałość — oraz w przeglądach projektowych i technicznych przed inżynierami z całego świata motorsportu." data-en="Formula Student is the world's largest engineering competition for university students, organized by SAE International and IMechE. Teams design and build single-seat race cars, competing in dynamic events on track — acceleration, autocross, endurance — and in design reviews and scrutineering before industry engineers from across the motorsport world.">Formula Student is the world's largest engineering competition for university students, organized by SAE International and IMechE. Teams design and build single-seat race cars, competing in dynamic events on track — acceleration, autocross, endurance — and in design reviews and scrutineering before industry engineers from across the motorsport world.</p>
+      <p data-pl="Zawody nie wyłaniają najszybszego bolidu — wyłaniają najlepiej zaprojektowany. Zespoły prezentują doskonałość inżynierską, zmysł biznesowy i umiejętności za kierownicą na torach na całym świecie — a eventy statyczne: Design Event, Cost Report i Business Plan — mają równie duże znaczenie jak wyniki na trasie." data-en="The competition does not pick the fastest car — it picks the best-engineered one. Teams showcase engineering excellence, business acumen and driving skills on circuits across the globe, with static events — Design, Cost Report, Business Plan — carrying equal weight alongside performance on track.">The competition does not pick the fastest car — it picks the best-engineered one. Teams showcase engineering excellence, business acumen and driving skills on circuits across the globe, with static events — Design, Cost Report, Business Plan — carrying equal weight alongside performance on track.</p>
+      <div class="projects-links-group fs-intro-links">
+        <a href="https://fs-poland.pl/pl/strona-glowna/" target="_blank" rel="noopener" class="projects-page-link projects-page-link--ghost" data-pl="Formuła Student Polska ↗" data-en="Formula Student Poland ↗">Formula Student Poland ↗</a>
       </div>
     </section>
 
     <hr class="fs-divider">
 
     <section class="fs-section">
-      <p class="fs-section-label" data-pl="Zespół" data-en="Team">Zespół</p>
-      <h2 data-pl="Kim jesteśmy?" data-en="Who are we?">Kim jesteśmy?</h2>
-      <p data-pl="KNF to koło naukowe działające na wydziale fizyki — zespół studentów inżynierii poświęconych przesuwaniu granic tego, co studencki projekt może osiągnąć. Zaczęliśmy od pytania: co by było, gdybyśmy zbudowali bolid od zera, opierając każdą decyzję na fizyce i danych? Dziś mamy pięć aktywnych podsystemów, rosnący zespół i precyzyjny plan rozwoju." data-en="KNF is a student research club based in the physics faculty — a team of engineering students dedicated to pushing the boundaries of what a university project can achieve. We started with a question: what if we built a car from scratch, grounding every decision in physics and data? Today we have five active subsystems, a growing team, and a precise development plan.">KNF to koło naukowe działające na wydziale fizyki — zespół studentów inżynierii poświęconych przesuwaniu granic tego, co studencki projekt może osiągnąć. Zaczęliśmy od pytania: co by było, gdybyśmy zbudowali bolid od zera, opierając każdą decyzję na fizyce i danych? Dziś mamy pięć aktywnych podsystemów, rosnący zespół i precyzyjny plan rozwoju.</p>
+      <p class="fs-section-label" data-pl="Zespół" data-en="Team">Team</p>
+      <h2 data-pl="Kim jesteśmy?" data-en="Who are we?">Who are we?</h2>
+      <p data-pl="KNF to koło naukowe działające na wydziale fizyki — zespół studentów inżynierii poświęconych przesuwaniu granic tego, co studencki projekt może osiągnąć. Zaczęliśmy od pytania: co by było, gdybyśmy zbudowali bolid od zera, opierając każdą decyzję na fizyce i danych? Dziś mamy pięć aktywnych podsystemów, rosnący zespół i precyzyjny plan rozwoju." data-en="KNF is a student research club based in the physics faculty — a team of engineering students dedicated to pushing the boundaries of what a university project can achieve. We started with a question: what if we built a car from scratch, grounding every decision in physics and data? Today we have five active subsystems, a growing team, and a precise development plan.">KNF is a student research club based in the physics faculty — a team of engineering students dedicated to pushing the boundaries of what a university project can achieve. We started with a question: what if we built a car from scratch, grounding every decision in physics and data? Today we have five active subsystems, a growing team, and a precise development plan.</p>
 
       <div class="fs-stats">
         <div class="fs-stat">
           <span class="fs-stat-val">2027</span>
-          <span class="fs-stat-label" data-pl="Planowany sezon startowy" data-en="Target competition season">Planowany sezon startowy</span>
+          <span class="fs-stat-label" data-pl="Planowany sezon startowy" data-en="Target competition season">Target competition season</span>
         </div>
         <div class="fs-stat">
           <span class="fs-stat-val">2025</span>
-          <span class="fs-stat-label" data-pl="Rok rozpoczęcia prac" data-en="Work start year">Rok rozpoczęcia prac</span>
+          <span class="fs-stat-label" data-pl="Rok rozpoczęcia prac" data-en="Work start year">Work start year</span>
         </div>
         <div class="fs-stat">
           <span class="fs-stat-val">5</span>
-          <span class="fs-stat-label" data-pl="Podsystemów inżynierskich" data-en="Engineering subsystems">Podsystemów inżynierskich</span>
+          <span class="fs-stat-label" data-pl="Podsystemów inżynierskich" data-en="Engineering subsystems">Engineering subsystems</span>
         </div>
         <div class="fs-stat">
           <span class="fs-stat-val">CV</span>
-          <span class="fs-stat-label" data-pl="Klasa startowa (spalinowa)" data-en="Competition class (combustion)">Klasa startowa (spalinowa)</span>
+          <span class="fs-stat-label" data-pl="Klasa startowa (spalinowa)" data-en="Competition class (combustion)">Competition class (combustion)</span>
         </div>
       </div>
     </section>
@@ -123,25 +135,25 @@
     <hr class="fs-divider">
 
     <section class="fs-section">
-      <p class="fs-section-label" data-pl="Harmonogram" data-en="Timeline">Harmonogram</p>
-      <h2 data-pl="Nasz plan" data-en="Our plan">Nasz plan</h2>
-      <p data-pl="Budowa bolidu to wieloetapowy projekt inżynierski podzielony na trzy kluczowe fazy. Każda faza ma konkretne punkty kontrolne — iterujemy, nie zgadujemy." data-en="Building the car is a multi-stage engineering project split into three key phases. Each phase has concrete checkpoints — we iterate, we don't guess.">Budowa bolidu to wieloetapowy projekt inżynierski podzielony na trzy kluczowe fazy. Każda faza ma konkretne punkty kontrolne — iterujemy, nie zgadujemy.</p>
+      <p class="fs-section-label" data-pl="Harmonogram" data-en="Timeline">Timeline</p>
+      <h2 data-pl="Nasz plan" data-en="Our plan">Our plan</h2>
+      <p data-pl="Budowa bolidu to wieloetapowy projekt inżynierski podzielony na trzy kluczowe fazy. Każda faza ma konkretne punkty kontrolne — iterujemy, nie zgadujemy." data-en="Building the car is a multi-stage engineering project split into three key phases. Each phase has concrete checkpoints — we iterate, we don't guess.">Building the car is a multi-stage engineering project split into three key phases. Each phase has concrete checkpoints — we iterate, we don't guess.</p>
 
       <div class="fs-grid">
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="Faza 01" data-en="Phase 01">Faza 01</span>
-          <h3 data-pl="Badania i projekt" data-en="Research &amp; Design">Badania i projekt</h3>
-          <p data-pl="Definiujemy architekturę bolidu, przeprowadzamy analizy CFD i FEA, projektujemy geometrię zawieszenia, dobieramy napęd i określamy wymagania dla każdego podsystemu. Żadna część nie jest zamawiana bez uzasadnienia w obliczeniach." data-en="We define the car architecture, run CFD and FEA analyses, design suspension geometry, select the drivetrain, and set requirements for each subsystem. No part is ordered without calculation backing.">Definiujemy architekturę bolidu, przeprowadzamy analizy CFD i FEA, projektujemy geometrię zawieszenia, dobieramy napęd i określamy wymagania dla każdego podsystemu. Żadna część nie jest zamawiana bez uzasadnienia w obliczeniach.</p>
+          <span class="fs-card-num" data-pl="Faza 01" data-en="Phase 01">Phase 01</span>
+          <h3 data-pl="Badania i projekt" data-en="Research &amp; Design">Research &amp; Design</h3>
+          <p data-pl="Definiujemy architekturę bolidu, przeprowadzamy analizy CFD i FEA, projektujemy geometrię zawieszenia, dobieramy napęd i określamy wymagania dla każdego podsystemu. Żadna część nie jest zamawiana bez uzasadnienia w obliczeniach." data-en="We define the car architecture, run CFD and FEA analyses, design suspension geometry, select the drivetrain, and set requirements for each subsystem. No part is ordered without calculation backing.">We define the car architecture, run CFD and FEA analyses, design suspension geometry, select the drivetrain, and set requirements for each subsystem. No part is ordered without calculation backing.</p>
         </div>
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="Faza 02" data-en="Phase 02">Faza 02</span>
-          <h3 data-pl="Produkcja i integracja" data-en="Manufacturing &amp; Integration">Produkcja i integracja</h3>
-          <p data-pl="Wytwarzamy komponenty, spawamy ramę, integrujemy podsystemy. Każdy interfejs między podzespołami jest weryfikowany przed złożeniem całości. Cel: pierwsze uruchomienie bolidu w warsztacie." data-en="We manufacture components, weld the frame, integrate subsystems. Every interface between assemblies is verified before final assembly. Goal: first engine-start in the workshop.">Wytwarzamy komponenty, spawamy ramę, integrujemy podsystemy. Każdy interfejs między podzespołami jest weryfikowany przed złożeniem całości. Cel: pierwsze uruchomienie bolidu w warsztacie.</p>
+          <span class="fs-card-num" data-pl="Faza 02" data-en="Phase 02">Phase 02</span>
+          <h3 data-pl="Produkcja i integracja" data-en="Manufacturing &amp; Integration">Manufacturing &amp; Integration</h3>
+          <p data-pl="Wytwarzamy komponenty, spawamy ramę, integrujemy podsystemy. Każdy interfejs między podzespołami jest weryfikowany przed złożeniem całości. Cel: pierwsze uruchomienie bolidu w warsztacie." data-en="We manufacture components, weld the frame, integrate subsystems. Every interface between assemblies is verified before final assembly. Goal: first engine-start in the workshop.">We manufacture components, weld the frame, integrate subsystems. Every interface between assemblies is verified before final assembly. Goal: first engine-start in the workshop.</p>
         </div>
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="Faza 03" data-en="Phase 03">Faza 03</span>
-          <h3 data-pl="Testy i przygotowanie" data-en="Testing &amp; Preparation">Testy i przygotowanie</h3>
-          <p data-pl="Testy dynamiczne na torze, kalibracja zawieszenia, optymalizacja setupu. Przygotowanie pełnej dokumentacji Design Event, Cost Report i Business Plan pod standardy zawodów Formula Student." data-en="Dynamic testing on track, suspension calibration, setup optimisation. Preparation of complete Design Event, Cost Report and Business Plan documentation matching Formula Student requirements.">Testy dynamiczne na torze, kalibracja zawieszenia, optymalizacja setupu. Przygotowanie pełnej dokumentacji Design Event, Cost Report i Business Plan pod standardy zawodów Formula Student.</p>
+          <span class="fs-card-num" data-pl="Faza 03" data-en="Phase 03">Phase 03</span>
+          <h3 data-pl="Testy i przygotowanie" data-en="Testing &amp; Preparation">Testing &amp; Preparation</h3>
+          <p data-pl="Testy dynamiczne na torze, kalibracja zawieszenia, optymalizacja setupu. Przygotowanie pełnej dokumentacji Design Event, Cost Report i Business Plan pod standardy zawodów Formula Student." data-en="Dynamic testing on track, suspension calibration, setup optimisation. Preparation of complete Design Event, Cost Report and Business Plan documentation matching Formula Student requirements.">Dynamic testing on track, suspension calibration, setup optimisation. Preparation of complete Design Event, Cost Report and Business Plan documentation matching Formula Student requirements.</p>
         </div>
       </div>
     </section>
@@ -150,34 +162,34 @@
 
     <section class="fs-section">
       <p class="fs-section-label" data-pl="Status" data-en="Status">Status</p>
-      <h2 data-pl="Postęp prac" data-en="Progress">Postęp prac</h2>
-      <p data-pl="Aktualne zaawansowanie każdego podsystemu. Każdy obszar pracuje niezależnie — integracja przeglądana co miesiąc." data-en="Current progress on each subsystem. Every area works independently — integration reviewed monthly.">Aktualne zaawansowanie każdego podsystemu. Każdy obszar pracuje niezależnie — integracja przeglądana co miesiąc.</p>
+      <h2 data-pl="Postęp prac" data-en="Progress">Progress</h2>
+      <p data-pl="Aktualne zaawansowanie każdego podsystemu. Każdy obszar pracuje niezależnie — integracja przeglądana co miesiąc." data-en="Current progress on each subsystem. Every area works independently — integration reviewed monthly.">Current progress on each subsystem. Every area works independently — integration reviewed monthly.</p>
 
       <div class="fs-grid">
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="01 — Aerodynamika" data-en="01 — Aerodynamics">01 — Aerodynamika</span>
-          <h3 data-pl="W trakcie — CFD" data-en="In progress — CFD">W trakcie — CFD</h3>
-          <p data-pl="Symulacje CFD skrzydła przedniego w toku. Geometria bazowa zdefiniowana, trwa optymalizacja kąta natarcia i profilu przekroju." data-en="Front wing CFD simulations in progress. Base geometry defined, optimising angle of attack and section profile.">Symulacje CFD skrzydła przedniego w toku. Geometria bazowa zdefiniowana, trwa optymalizacja kąta natarcia i profilu przekroju.</p>
+          <span class="fs-card-num" data-pl="01 — Aerodynamika" data-en="01 — Aerodynamics">01 — Aerodynamics</span>
+          <h3 data-pl="W trakcie — CFD" data-en="In progress — CFD">In progress — CFD</h3>
+          <p data-pl="Symulacje CFD skrzydła przedniego w toku. Geometria bazowa zdefiniowana, trwa optymalizacja kąta natarcia i profilu przekroju." data-en="Front wing CFD simulations in progress. Base geometry defined, optimising angle of attack and section profile.">Front wing CFD simulations in progress. Base geometry defined, optimising angle of attack and section profile.</p>
         </div>
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="02 — Zawieszenie" data-en="02 — Suspension">02 — Zawieszenie</span>
-          <h3 data-pl="W trakcie — kinematyka" data-en="In progress — kinematics">W trakcie — kinematyka</h3>
-          <p data-pl="Geometria podwójnego wahacza zdefiniowana. Trwa analiza punktów hardpoint i optymalizacja rollcenter pod docelową masę bolidu." data-en="Double-wishbone geometry defined. Hardpoint analysis and rollcenter optimisation underway for target car mass.">Geometria podwójnego wahacza zdefiniowana. Trwa analiza punktów hardpoint i optymalizacja rollcenter pod docelową masę bolidu.</p>
+          <span class="fs-card-num" data-pl="02 — Zawieszenie" data-en="02 — Suspension">02 — Suspension</span>
+          <h3 data-pl="W trakcie — kinematyka" data-en="In progress — kinematics">In progress — kinematics</h3>
+          <p data-pl="Geometria podwójnego wahacza zdefiniowana. Trwa analiza punktów hardpoint i optymalizacja rollcenter pod docelową masę bolidu." data-en="Double-wishbone geometry defined. Hardpoint analysis and rollcenter optimisation underway for target car mass.">Double-wishbone geometry defined. Hardpoint analysis and rollcenter optimisation underway for target car mass.</p>
         </div>
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="03 — Telemetria" data-en="03 — Telemetry">03 — Telemetria</span>
-          <h3 data-pl="Planowanie — dobór komponentów" data-en="Planning — component selection">Planowanie — dobór komponentów</h3>
-          <p data-pl="Lista czujników zdefiniowana. Trwa wybór mikrokontrolera i architektura magistrali CAN. Cel: własna płytka telemetrii zaprojektowana in-house." data-en="Sensor list defined. Microcontroller selection and CAN bus architecture in progress. Goal: in-house designed telemetry PCB.">Lista czujników zdefiniowana. Trwa wybór mikrokontrolera i architektura magistrali CAN. Cel: własna płytka telemetrii zaprojektowana in-house.</p>
+          <span class="fs-card-num" data-pl="03 — Telemetria" data-en="03 — Telemetry">03 — Telemetry</span>
+          <h3 data-pl="Planowanie — dobór komponentów" data-en="Planning — component selection">Planning — component selection</h3>
+          <p data-pl="Lista czujników zdefiniowana. Trwa wybór mikrokontrolera i architektura magistrali CAN. Cel: własna płytka telemetrii zaprojektowana in-house." data-en="Sensor list defined. Microcontroller selection and CAN bus architecture in progress. Goal: in-house designed telemetry PCB.">Sensor list defined. Microcontroller selection and CAN bus architecture in progress. Goal: in-house designed telemetry PCB.</p>
         </div>
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="04 — Podwozie" data-en="04 — Chassis">04 — Podwozie</span>
-          <h3 data-pl="W trakcie — FEA" data-en="In progress — FEA">W trakcie — FEA</h3>
-          <p data-pl="Wstępna konfiguracja ramy przestrzennej Cr-Mo opracowana. Trwa analiza MES pod kątem sztywności skrętnej i obciążeń udarowych przy zderzeniu bocznym (regulamin FSG)." data-en="Preliminary Cr-Mo space frame layout complete. FEA underway for torsional stiffness and side-impact load cases per FSG rulebook.">Wstępna konfiguracja ramy przestrzennej Cr-Mo opracowana. Trwa analiza MES pod kątem sztywności skrętnej i obciążeń udarowych przy zderzeniu bocznym (regulamin FSG).</p>
+          <span class="fs-card-num" data-pl="04 — Podwozie" data-en="04 — Chassis">04 — Chassis</span>
+          <h3 data-pl="W trakcie — FEA" data-en="In progress — FEA">In progress — FEA</h3>
+          <p data-pl="Wstępna konfiguracja ramy przestrzennej Cr-Mo opracowana. Trwa analiza MES pod kątem sztywności skrętnej i obciążeń udarowych przy zderzeniu bocznym (regulamin FSG)." data-en="Preliminary Cr-Mo space frame layout complete. FEA underway for torsional stiffness and side-impact load cases per FSG rulebook.">Preliminary Cr-Mo space frame layout complete. FEA underway for torsional stiffness and side-impact load cases per FSG rulebook.</p>
         </div>
         <div class="fs-card">
-          <span class="fs-card-num" data-pl="05 — Napęd" data-en="05 — Powertrain">05 — Napęd</span>
-          <h3 data-pl="Planowanie — dobór silnika" data-en="Planning — engine selection">Planowanie — dobór silnika</h3>
-          <p data-pl="Analiza porównawcza jednostek napędowych w toku. Kryteria: masa, niezawodność, dostępność części, ograniczenia regulaminowe (restrictor 20 mm)." data-en="Comparative analysis of engine candidates underway. Criteria: mass, reliability, parts availability, rulebook constraints (20 mm restrictor).">Analiza porównawcza jednostek napędowych w toku. Kryteria: masa, niezawodność, dostępność części, ograniczenia regulaminowe (restrictor 20 mm).</p>
+          <span class="fs-card-num" data-pl="05 — Napęd" data-en="05 — Powertrain">05 — Powertrain</span>
+          <h3 data-pl="Planowanie — dobór silnika" data-en="Planning — engine selection">Planning — engine selection</h3>
+          <p data-pl="Analiza porównawcza jednostek napędowych w toku. Kryteria: masa, niezawodność, dostępność części, ograniczenia regulaminowe (restrictor 20 mm)." data-en="Comparative analysis of engine candidates underway. Criteria: mass, reliability, parts availability, rulebook constraints (20 mm restrictor).">Comparative analysis of engine candidates underway. Criteria: mass, reliability, parts availability, rulebook constraints (20 mm restrictor).</p>
         </div>
       </div>
     </section>
@@ -186,13 +198,13 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand-col">
-        <a class="brand footer-brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
-        <p class="footer-tagline" data-pl="Formuła Student — od podstaw." data-en="Formula Student — from scratch.">Formuła Student — od podstaw.</p>
+        <a class="brand footer-brand" href="./index.html" aria-label="KNF home">Knf<sup>®</sup></a>
+        <p class="footer-tagline" data-pl="Formuła Student — od podstaw." data-en="Formula Student — from scratch.">Formula Student — from scratch.</p>
       </div>
-      <nav class="footer-nav" aria-label="Nawigacja w stopce">
-        <a href="./gallery.html" data-pl="Galeria" data-en="Gallery">Galeria</a>
-        <a href="./formula-student.html" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
-        <a href="./contact.html" data-pl="Kontakt" data-en="Contact">Kontakt</a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="./gallery.html" data-pl="Galeria" data-en="Gallery">Gallery</a>
+        <a href="./formula-student.html" data-pl="Formuła Student" data-en="Formula Student">Formula Student</a>
+        <a href="./contact.html" data-pl="Kontakt" data-en="Contact">Contact</a>
       </nav>
       <p class="footer-copy">© 2026 KNF Koło Naukowe</p>
     </div>
