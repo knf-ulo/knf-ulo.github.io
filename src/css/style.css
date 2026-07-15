@@ -666,6 +666,13 @@ main {
   grid-template-columns: 1fr;
 }
 
+/* Paired entry: two text blocks stacked in the left column, one photo
+   in the right column stretched across both (via align-items: stretch) */
+.team-pair-texts {
+  display: flex;
+  flex-direction: column;
+}
+
 .team-row-03 .team-text {
   width: min(72.5%, 100%);
 }
