@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="pl" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KNF Koło Naukowe — projektujemy pierwszy bolid Formuły Studenckiej od zera, opierając każdą decyzję na fizyce i rzetelnej inżynierii." />
+  <meta name="description" content="KNF Koło Naukowe — projektujemy pierwszy bolid Formuły Student od zera, opierając każdą decyzję na fizyce i rzetelnej inżynierii." />
   <title>KNF — Formuła Studencka</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +23,10 @@
       </button>
 
       <div class="nav-shell" id="nav-links">
-        <a href="#projects" class="nav-link" data-section="projects" data-pl="Projekty" data-en="Projects">Projekty</a>
-        <a href="#about" class="nav-link" data-section="about" data-pl="O nas" data-en="About">O nas</a>
+        <a href="#" class="nav-link" data-pl="Strona główna" data-en="Home">Home</a>
+        <a href="./gallery.html" class="nav-link" data-pl="Galeria" data-en="Gallery">Galeria</a>
+        <a href="./formula-student.html" class="nav-link" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
+        <a href="./contact.html" class="nav-link" data-pl="Kontakt" data-en="Contact">Kontakt</a>
 
         <div class="settings-wrap">
           <button class="settings-btn" type="button" aria-label="Ustawienia" aria-expanded="false" aria-controls="settings-dropdown">
@@ -61,21 +63,11 @@
       </div>
 
       <div class="socials" aria-label="Media społecznościowe">
-        <a href="#" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14.5 4.5v9.1a3.9 3.9 0 1 1-2.8-3.7v2.3a1.8 1.8 0 1 0 .7 1.4V2.8h2.1c.2 1.7 1.2 3.2 2.8 4v2.2a6.2 6.2 0 0 1-2.8-1.2z"></path>
-          </svg>
-        </a>
-        <a href="#" aria-label="Instagram">
+        <a href="https://www.instagram.com/knf_ulo" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.4" ry="4.4"></rect>
             <circle cx="12" cy="12" r="3.6"></circle>
             <circle cx="17.1" cy="6.9" r="1"></circle>
-          </svg>
-        </a>
-        <a href="#" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M13.3 8.4V6.9c0-.8.3-1.2 1.2-1.2h1.7V3h-2.3c-2.4 0-3.6 1.4-3.6 3.7v1.7H8.5v2.9h1.8V21h3V11.3h2.4l.3-2.9h-2.7z"></path>
           </svg>
         </a>
       </div>
@@ -83,288 +75,115 @@
   </header>
 
   <main>
-    <!-- ── Hero ──────────────────────────────────────────────── -->
     <section class="hero-section" id="home">
       <div class="bg-angle" aria-hidden="true">
-        <svg class="hero-blueprint-sketch" viewBox="0 0 1200 760" aria-hidden="true">
-
-          <!-- Main body silhouette, wings, roll hoop, wheels -->
-          <g class="bp-main">
-            <!-- Front wheel: outer tyre + rim -->
-            <circle cx="295" cy="468" r="80"></circle>
-            <circle cx="295" cy="468" r="48"></circle>
-            <!-- Rear wheel: outer tyre + rim -->
-            <circle cx="858" cy="468" r="80"></circle>
-            <circle cx="858" cy="468" r="48"></circle>
-
-            <!-- Upper body profile: nose tip → body → cockpit → roll hoop → rear deck -->
-            <path d="M155 532 Q204 514 252 498 Q274 490 312 468 Q328 456 362 442 L430 418 L606 410 L620 410 L620 272 L636 272 L636 410 Q714 424 790 444 L840 458 Q882 470 920 492 L944 510"></path>
-
-            <!-- Underbody / floor + rear diffuser -->
-            <path d="M155 532 L318 538 L840 538 Q882 538 920 520 L944 510"></path>
-
-            <!-- Front wing — main element + upper flap + endplate -->
-            <path d="M42 538 L153 538"></path>
-            <path d="M58 524 L148 524"></path>
-            <path d="M153 520 L153 542"></path>
-
-            <!-- Rear wing — main + flap + endplates + twin mounting pylons -->
-            <path d="M848 286 L980 286"></path>
-            <path d="M862 272 L968 272"></path>
-            <path d="M848 268 L848 316"></path>
-            <path d="M980 268 L980 316"></path>
-            <path d="M884 286 L884 460"></path>
-            <path d="M944 286 L944 460"></path>
-          </g>
-
-          <!-- Suspension, cockpit opening, intake, fine body detail -->
-          <g class="bp-lower">
-            <!-- Front double-wishbone (upper + lower arms, V-shape from body) -->
-            <path d="M362 444 L295 430 L228 444"></path>
-            <path d="M362 492 L295 506 L228 492"></path>
-            <!-- Rear double-wishbone -->
-            <path d="M816 456 L858 442 L900 456"></path>
-            <path d="M816 504 L858 516 L900 504"></path>
-
-            <!-- Cockpit windscreen arc -->
-            <path d="M460 414 Q558 372 656 414"></path>
-
-            <!-- Sidepod intake cutout -->
-            <path d="M652 428 h52 v30 h-52 z"></path>
-
-            <!-- Nosecone centreline detail -->
-            <path d="M155 532 Q210 512 270 500"></path>
-
-            <!-- Steering column / front bulkhead line -->
-            <path d="M362 418 L362 538"></path>
-
-            <!-- Rear axle vertical tick -->
-            <path d="M858 458 L858 538"></path>
-          </g>
-
-          <!-- Construction grid — dashed reference lines -->
-          <g class="bp-helpers">
-            <!-- Ground line -->
-            <path d="M40 548 L1120 548"></path>
-            <!-- Wheel-centre horizontal -->
-            <path d="M40 468 L1120 468"></path>
-            <!-- Roll-hoop minimum height horizontal -->
-            <path d="M40 272 L1120 272"></path>
-            <!-- Front axle vertical -->
-            <path d="M295 210 L295 560"></path>
-            <!-- Rear axle vertical -->
-            <path d="M858 210 L858 560"></path>
-            <!-- Roll hoop vertical -->
-            <path d="M628 220 L628 560"></path>
-            <!-- Nose tip vertical -->
-            <path d="M155 480 L155 560"></path>
-            <!-- Rear of car vertical -->
-            <path d="M944 450 L944 560"></path>
-          </g>
-
-          <!-- Dimension lines and annotations -->
-          <g class="bp-dims">
-            <!-- Wheelbase dim: arrows + label -->
-            <path d="M295 594 L858 594"></path>
-            <path d="M295 586 L295 602"></path>
-            <path d="M858 586 L858 602"></path>
-
-            <!-- Roll-hoop height dim -->
-            <path d="M1028 272 L1028 468"></path>
-            <path d="M1021 272 L1035 272"></path>
-            <path d="M1021 468 L1035 468"></path>
-
-            <!-- Front overhang dim -->
-            <path d="M155 626 L295 626"></path>
-            <path d="M155 618 L155 634"></path>
-            <path d="M295 618 L295 634"></path>
-
-            <!-- Helmet clearance leader -->
-            <path d="M628 272 L628 140"></path>
-            <path d="M622 140 L780 140"></path>
-
-            <text x="490" y="588">ROZSTAW OSI — 1525 mm (min)</text>
-            <text x="1040" y="374">600 mm</text>
-            <text x="160" y="664">WYSIĘG PRZEDNI</text>
-            <text x="790" y="136">MIN. PRZEŚWIT KASKU</text>
-          </g>
-
-          <!-- Detail inset — wheel cross-section -->
-          <g class="bp-section">
-            <path d="M1038 488 h104 v84 h-104 z"></path>
-            <path d="M1038 488 l20 20 h64 l20-20"></path>
-            <path d="M1038 572 l20-20 h64 l20 20"></path>
-            <path d="M1090 508 v46"></path>
-            <text x="1044" y="468">PRZEKRÓJ — KOŁO</text>
-            <text x="1054" y="584">ø 508 mm</text>
-          </g>
-        </svg>
+        <img class="hero-blueprint-sketch" src="./Vector.svg" aria-hidden="true" alt="">
       </div>
 
       <div class="hero-content">
-        <p class="hero-kicker"
-           data-pl="Koło Naukowe"
-           data-en="Physics Club">Koło Naukowe</p>
-        <h1 data-pl="Jeszcze bez auta. Już na pełnym gazie."
-            data-en="No car yet. Already flat out.">Jeszcze bez auta. Już na pełnym gazie.</h1>
-        <p data-pl="Projektujemy pierwszy bolid Formuły Studenckiej od zera — każda decyzja oparta na obliczeniach, każda iteracja bliżej toru."
-           data-en="We're designing our first Formula Student car from scratch — every decision grounded in calculation, every iteration closer to the track.">Projektujemy pierwszy bolid Formuły Studenckiej od zera — każda decyzja oparta na obliczeniach, każda iteracja bliżej toru.</p>
-        <a href="#projects" class="hero-cta"
-           data-pl="Poznaj projekty"
-           data-en="See Our Work">Poznaj projekty</a>
+        <p class="hero-kicker" data-pl="Koło Naukowe" data-en="Physics Club">Koło Naukowe</p>
+        <h1 data-pl="Jeszcze bez auta. Już na pełnym gazie." data-en="No car yet. Already flat out.">Jeszcze bez auta. Już na pełnym gazie.</h1>
+        <p data-pl="Projektujemy pierwszy bolid Formuły Student od zera — każda decyzja oparta na obliczeniach, każda iteracja bliżej toru." data-en="We're designing our first Formula Student car from scratch — every decision grounded in calculation, every iteration closer to the track.">Projektujemy pierwszy bolid Formuły Student od zera — każda decyzja oparta na obliczeniach, każda iteracja bliżej toru.</p>
+        <a href="#projects" class="hero-cta" data-pl="Poznaj projekty" data-en="See Our Work">Poznaj projekty</a>
       </div>
     </section>
 
-    <!-- ── Projekty ───────────────────────────────────────────── -->
     <section class="projects-section" id="projects">
-      <div class="projects-bg-shape" aria-hidden="true"></div>
-      <div class="projects-layout">
-        <aside class="projects-nav" aria-label="Nawigacja projektów">
+      <div class="projects-inner">
+        <header class="projects-header">
+          <p class="projects-kicker" data-pl="Aktualnie" data-en="Active">Aktualnie</p>
           <h2 data-pl="Projekty" data-en="Projects">Projekty</h2>
-          <nav class="project-links">
-            <a href="#proj-aero" class="project-link" data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamika</a>
-            <a href="#proj-suspension" class="project-link" data-pl="Zawieszenie" data-en="Suspension">Zawieszenie</a>
-            <a href="#proj-data" class="project-link" data-pl="Telemetria" data-en="Telemetry">Telemetria</a>
-            <a href="#proj-chassis" class="project-link" data-pl="Podwozie" data-en="Chassis">Podwozie</a>
-            <a href="#proj-powertrain" class="project-link" data-pl="Napęd" data-en="Powertrain">Napęd</a>
-          </nav>
-        </aside>
+          <p data-pl="Nasze aktywne obszary inżynierskie — od podsystemów bolidu po badania własne." data-en="Our active engineering areas — from car subsystems to independent research.">Nasze aktywne obszary inżynierskie — od podsystemów bolidu po badania własne.</p>
+          <div class="projects-links-group">
+            <a href="./gallery.html" class="projects-page-link" data-pl="Galeria zdjęć" data-en="Photo Gallery">Galeria zdjęć</a>
+            <a href="./formula-student.html" class="projects-page-link projects-page-link--ghost" data-pl="Nasz projekt FS" data-en="Our FS Project">Nasz projekt FS</a>
+          </div>
+        </header>
 
-        <div class="projects-showcase" aria-label="Siatka projektów">
-          <article class="project-card span-wide" id="proj-aero">
-            <div class="project-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Formula%20Student%20(MSP16).jpg" alt="Bolid Formuły Studenckiej w alei serwisowej" loading="lazy">
-              <h3 class="project-photo-title">
-                <span>01</span>
-                <span data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamika</span>
-              </h3>
-            </div>
-            <div class="project-overlay">
-              <p data-pl="Skrzydło przednie i dyfuzor projektowane w symulacjach CFD, weryfikowane przez szybkie prototypowanie z kompozytów."
-                 data-en="Front wing and diffuser designed in CFD simulations, validated through rapid composite prototyping.">Skrzydło przednie i dyfuzor projektowane w symulacjach CFD, weryfikowane przez szybkie prototypowanie z kompozytów.</p>
-            </div>
-          </article>
-
-          <article class="project-card span-tall" id="proj-suspension">
-            <div class="project-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Formula%20Student%20-%20silnik%20(MSP16).jpg" alt="Podzespoły mechaniczne bolidu Formuły Studenckiej" loading="lazy">
-              <h3 class="project-photo-title">
-                <span>02</span>
-                <span data-pl="Zawieszenie" data-en="Suspension">Zawieszenie</span>
-              </h3>
-            </div>
-            <div class="project-overlay">
-              <p data-pl="Geometria podwójnego wahacza strojona pod maksymalną przyczepność i przewidywalne zachowanie na każdym profilu toru."
-                 data-en="Double-wishbone geometry tuned for maximum grip and predictable behavior across every track profile.">Geometria podwójnego wahacza strojona pod maksymalną przyczepność i przewidywalne zachowanie na każdym profilu toru.</p>
-            </div>
-          </article>
-
-          <article class="project-card" id="proj-data">
-            <div class="project-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/DUT17.jpg" alt="Elektryczny bolid Formuły Studenckiej Delft" loading="lazy">
-              <h3 class="project-photo-title">
-                <span>03</span>
-                <span data-pl="Telemetria" data-en="Telemetry">Telemetria</span>
-              </h3>
-            </div>
-            <div class="project-overlay">
-              <p data-pl="Własny stos czujników i pulpit na żywo — kierowca dostaje dane w czasie rzeczywistym, inżynierowie optymalizują ustawienia między przejazdami."
-                 data-en="Custom sensor stack and live dashboard — the driver gets real-time data, engineers optimize setup between runs.">Własny stos czujników i pulpit na żywo — kierowca dostaje dane w czasie rzeczywistym, inżynierowie optymalizują ustawienia między przejazdami.</p>
-            </div>
-          </article>
-
-          <article class="project-card span-wide" id="proj-chassis">
-            <div class="project-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Formula%20SAE%202012.jpg" alt="Zespół Formula SAE z bolidem i podwoziem" loading="lazy">
-              <h3 class="project-photo-title">
-                <span>04</span>
-                <span data-pl="Podwozie" data-en="Chassis">Podwozie</span>
-              </h3>
-            </div>
-            <div class="project-overlay">
-              <p data-pl="Rama przestrzenna ze stali Cr-Mo, zoptymalizowana pod sztywność skrętną przy minimalnej masie i pełnej zgodności z regulaminem FSG."
-                 data-en="Chromoly space frame optimized for torsional stiffness at minimum weight, fully compliant with FSG regulations.">Rama przestrzenna ze stali Cr-Mo, zoptymalizowana pod sztywność skrętną przy minimalnej masie i pełnej zgodności z regulaminem FSG.</p>
-            </div>
-          </article>
-
-          <article class="project-card" id="proj-powertrain">
-            <div class="project-media">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/UII%20Electric%20Formula%20Student%20car.JPG" alt="Elektryczny bolid wyścigowy Formuły Studenckiej" loading="lazy">
-              <h3 class="project-photo-title">
-                <span>05</span>
-                <span data-pl="Napęd" data-en="Powertrain">Napęd</span>
-              </h3>
-            </div>
-            <div class="project-overlay">
-              <p data-pl="Układ napędowy i chłodzenia zaprojektowany na spójną moc przez cały czas trwania zawodów — od sprintu po wytrzymałość."
-                 data-en="Drivetrain and cooling designed for consistent power through the full duration of competition — from sprint to endurance.">Układ napędowy i chłodzenia zaprojektowany na spójną moc przez cały czas trwania zawodów — od sprintu po wytrzymałość.</p>
-            </div>
-          </article>
-        </div>
+        <ol class="projects-list">
+          <li class="project-entry">
+            <span class="pe-num">01</span>
+            <span class="pe-title" data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamika</span>
+            <span class="pe-desc" data-pl="Projektujemy pakiet aero bolidu Formuły Student — skrzydło przednie, dyfuzor tylny i elementy nadwozia — przy użyciu symulacji CFD. Iterujemy geometrię profili, analizujemy docisk i opory w różnych konfiguracjach, a każda zmiana jest weryfikowana ilościowo przed przejściem do kolejnej wersji." data-en="We design the Formula Student aero package — front wing, rear diffuser and bodywork — using CFD simulation. We iterate aerofoil geometry, analyse downforce and drag across configurations, and every change is verified quantitatively before moving to the next revision.">Projektujemy pakiet aero bolidu Formuły Student — skrzydło przednie, dyfuzor tylny i elementy nadwozia — przy użyciu symulacji CFD. Iterujemy geometrię profili, analizujemy docisk i opory w różnych konfiguracjach, a każda zmiana jest weryfikowana ilościowo przed przejściem do kolejnej wersji.</span>
+          </li>
+          <li class="project-entry">
+            <span class="pe-num">02</span>
+            <span class="pe-title" data-pl="Podwozie i Napęd" data-en="Chassis &amp; Powertrain">Podwozie i Napęd</span>
+            <span class="pe-desc" data-pl="Rama przestrzenna ze stali Cr-Mo projektowana z użyciem analizy MES pod kątem sztywności skrętnej i odporności na zderzenie boczne zgodnie z regulaminem FSG. Równolegle dobieramy jednostkę napędową, skrzynię biegów i układ chłodzenia — każda decyzja ważona masą, niezawodnością i zgodnością z przepisami." data-en="A Cr-Mo space frame designed with FEA for torsional stiffness and side-impact resistance per the FSG rulebook. In parallel we select the engine, gearbox and cooling system — every decision weighted by mass, reliability and regulatory compliance.">Rama przestrzenna ze stali Cr-Mo projektowana z użyciem analizy MES pod kątem sztywności skrętnej i odporności na zderzenie boczne zgodnie z regulaminem FSG. Równolegle dobieramy jednostkę napędową, skrzynię biegów i układ chłodzenia — każda decyzja ważona masą, niezawodnością i zgodnością z przepisami.</span>
+          </li>
+          <li class="project-entry">
+            <span class="pe-num">03</span>
+            <span class="pe-title" data-pl="Oprogramowanie" data-en="Software">Oprogramowanie</span>
+            <span class="pe-desc" data-pl="Tworzymy własne narzędzia inżynierskie — skrypty do analizy danych telemetrycznych, pulpit wizualizacji sensorów na żywo oraz skrypty automatyzujące powtarzalne obliczenia projektowe. Celem jest skrócenie pętli iteracyjnej: wynik pomiaru powinien trafiać do kolejnej decyzji projektowej w minuty, nie dni." data-en="We build our own engineering tools — scripts for analysing telemetry data, a live sensor visualisation dashboard, and scripts that automate repetitive design calculations. The goal is to tighten the iteration loop: a measurement result should feed the next design decision in minutes, not days.">Tworzymy własne narzędzia inżynierskie — skrypty do analizy danych telemetrycznych, pulpit wizualizacji sensorów na żywo oraz skrypty automatyzujące powtarzalne obliczenia projektowe. Celem jest skrócenie pętli iteracyjnej: wynik pomiaru powinien trafiać do kolejnej decyzji projektowej w minuty, nie dni.</span>
+          </li>
+          <li class="project-entry">
+            <span class="pe-num">04</span>
+            <span class="pe-title" data-pl="Badania Materiałowe" data-en="Materials Research">Badania Materiałowe</span>
+            <span class="pe-desc" data-pl="Prowadzimy własne testy materiałów i czujników niezwiązane bezpośrednio z bieżącą konstrukcją bolidu. Badamy właściwości zmęczeniowe połączeń spawanych, kalibrujemy czujniki siły i ugięcia oraz weryfikujemy dane katalogowe dostawców na własnych stanowiskach. Wyniki zasilają bazę wiedzy, którą wykorzystamy przy kolejnych generacjach bolidu." data-en="We run our own material and sensor tests independent of the current car build. We test fatigue properties of welded joints, calibrate force and deflection sensors, and verify supplier datasheet claims on our own rigs. The results feed a knowledge base we will draw on for future car generations.">Prowadzimy własne testy materiałów i czujników niezwiązane bezpośrednio z bieżącą konstrukcją bolidu. Badamy właściwości zmęczeniowe połączeń spawanych, kalibrujemy czujniki siły i ugięcia oraz weryfikujemy dane katalogowe dostawców na własnych stanowiskach. Wyniki zasilają bazę wiedzy, którą wykorzystamy przy kolejnych generacjach bolidu.</span>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ── O nas ──────────────────────────────────────────────── -->
     <section class="about-section" id="about">
       <div class="team-blueprint" aria-label="Manifest zespołu">
         <h2 data-pl="Nasz Zespół" data-en="The Team">Nasz Zespół</h2>
+        <p class="team-mission" data-pl="Jesteśmy studentami inżynierii z pasją do przesuwania granic tego, co studencki projekt może osiągnąć — budujemy pierwszy bolid od zera i kładziemy fundamenty dla następnego pokolenia inżynierów motorsportu." data-en="We are engineering students passionate about pushing the boundaries of what a university team can build — designing our first car from scratch, and laying the groundwork for the next generation of motorsport engineers.">Jesteśmy studentami inżynierii z pasją do przesuwania granic tego, co studencki projekt może osiągnąć — budujemy pierwszy bolid od zera i kładziemy fundamenty dla następnego pokolenia inżynierów motorsportu.</p>
 
         <div class="team-list">
           <article class="team-row no-photo">
             <div class="team-text">
               <h3><span>01</span> <span data-pl="Rzetelność" data-en="Integrity">Rzetelność</span></h3>
-              <p data-pl="Każda decyzja projektowa jest oparta na danych. Dokumentujemy założenia, weryfikujemy obliczenia i dzielimy się wynikami — nawet gdy pokazują błąd. Rzetelność to dla nas traktowanie własnych niedociągnięć jako materiału do pracy, nie powodu do wstydu."
-                 data-en="Every design decision is grounded in data. We document assumptions, verify calculations, and share results — even when they show a mistake. Integrity means treating our own shortcomings as material to work with, not reasons for embarrassment.">Każda decyzja projektowa jest oparta na danych. Dokumentujemy założenia, weryfikujemy obliczenia i dzielimy się wynikami — nawet gdy pokazują błąd. Rzetelność to dla nas traktowanie własnych niedociągnięć jako materiału do pracy, nie powodu do wstydu.</p>
+              <p data-pl="Każda decyzja projektowa jest oparta na danych. Dokumentujemy założenia, weryfikujemy obliczenia i dzielimy się wynikami — nawet gdy pokazują błąd. Rzetelność to dla nas traktowanie własnych niedociągnięć jako materiału do pracy, nie powodu do wstydu." data-en="Every design decision is grounded in data. We document assumptions, verify calculations, and share results — even when they show a mistake. Integrity means treating our own shortcomings as material to work with, not reasons for embarrassment.">Każda decyzja projektowa jest oparta na danych. Dokumentujemy założenia, weryfikujemy obliczenia i dzielimy się wynikami — nawet gdy pokazują błąd. Rzetelność to dla nas traktowanie własnych niedociągnięć jako materiału do pracy, nie powodu do wstydu.</p>
             </div>
           </article>
 
           <article class="team-row">
             <div class="team-text">
               <h3><span>02</span> <span data-pl="Niezawodność" data-en="Reliability">Niezawodność</span></h3>
-              <p data-pl="Bolid, który nie kończy przejazdu, nie jest szybki. Każdy podsystem projektujemy pod kątem powtarzalności, łatwości serwisu i odporności na warunki zawodowe. Naszym celem jest zero awarii technicznych — nie jako hasło, lecz jako mierzalny cel inżynierski."
-                 data-en="A car that doesn't finish the run isn't fast. Every subsystem is designed for repeatability, ease of service, and resilience under competition conditions. Our target is zero mechanical failures — not as a slogan, but as a measurable engineering goal.">Bolid, który nie kończy przejazdu, nie jest szybki. Każdy podsystem projektujemy pod kątem powtarzalności, łatwości serwisu i odporności na warunki zawodowe. Naszym celem jest zero awarii technicznych — nie jako hasło, lecz jako mierzalny cel inżynierski.</p>
+              <p data-pl="Bolid, który nie kończy przejazdu, nie jest szybki. Każdy podsystem projektujemy pod kątem powtarzalności, łatwości serwisu i odporności na warunki zawodowe. Naszym celem jest zero awarii technicznych — nie jako hasło, lecz jako mierzalny cel inżynierski." data-en="A car that doesn't finish the run isn't fast. Every subsystem is designed for repeatability, ease of service, and resilience under competition conditions. Our target is zero mechanical failures — not as a slogan, but as a measurable engineering goal.">Bolid, który nie kończy przejazdu, nie jest szybki. Każdy podsystem projektujemy pod kątem powtarzalności, łatwości serwisu i odporności na warunki zawodowe. Naszym celem jest zero awarii technicznych — nie jako hasło, lecz jako mierzalny cel inżynierski.</p>
             </div>
-            <div class="team-shot" data-pl="Zdjęcie 02" data-en="Photo 02">Zdjęcie 02</div>
+            <div class="team-shot" aria-hidden="true"></div>
           </article>
 
           <article class="team-row no-photo team-row-03">
             <div class="team-text">
               <h3><span>03</span> <span data-pl="Precyzja" data-en="Precision">Precyzja</span></h3>
-              <p data-pl="Tolerancja to nie formalność — to różnica między projektem, który działa, a tym, który zawodzi. Od CAD-u po stanowisko testowe pilnujemy każdej liczby. Wyniki porównujemy z symulacjami i wprowadzamy do następnej iteracji."
-                 data-en="A tolerance is not a formality — it is the difference between a design that works and one that fails. From CAD to the test bench, we track every number. Results are compared against simulations and fed into the next iteration.">Tolerancja to nie formalność — to różnica między projektem, który działa, a tym, który zawodzi. Od CAD-u po stanowisko testowe pilnujemy każdej liczby. Wyniki porównujemy z symulacjami i wprowadzamy do następnej iteracji.</p>
+              <p data-pl="Tolerancja to nie formalność — to różnica między projektem, który działa, a tym, który zawodzi. Od CAD-u po stanowisko testowe pilnujemy każdej liczby. Wyniki porównujemy z symulacjami i wprowadzamy do następnej iteracji." data-en="A tolerance is not a formality — it is the difference between a design that works and one that fails. From CAD to the test bench, we track every number. Results are compared against simulations and fed into the next iteration.">Tolerancja to nie formalność — to różnica między projektem, który działa, a tym, który zawodzi. Od CAD-u po stanowisko testowe pilnujemy każdej liczby. Wyniki porównujemy z symulacjami i wprowadzamy do następnej iteracji.</p>
             </div>
           </article>
 
           <article class="team-row no-photo">
             <div class="team-text">
               <h3><span>04</span> <span data-pl="Praca Zespołowa" data-en="Teamwork">Praca Zespołowa</span></h3>
-              <p data-pl="Aerodynamika nie istnieje bez podwozia. Napęd bez telemetrii jest ślepy. Pracujemy jako jeden system — z regularnymi przeglądami integracji, jasnym podziałem odpowiedzialności i kulturą, w której problem zgłaszany jest wcześnie, a nie ukrywany."
-                 data-en="Aerodynamics does not exist without the chassis. Powertrain without telemetry is blind. We work as one system — with regular integration reviews, clear ownership, and a culture where problems are raised early, not buried.">Aerodynamika nie istnieje bez podwozia. Napęd bez telemetrii jest ślepy. Pracujemy jako jeden system — z regularnymi przeglądami integracji, jasnym podziałem odpowiedzialności i kulturą, w której problem zgłaszany jest wcześnie, a nie ukrywany.</p>
+              <p data-pl="Aerodynamika nie istnieje bez podwozia. Napęd bez telemetrii jest ślepy. Pracujemy jako jeden system — z regularnymi przeglądami integracji, jasnym podziałem odpowiedzialności i kulturą, w której problem zgłaszany jest wcześnie, a nie ukrywany." data-en="Aerodynamics does not exist without the chassis. Powertrain without telemetry is blind. We work as one system — with regular integration reviews, clear ownership, and a culture where problems are raised early, not buried.">Aerodynamika nie istnieje bez podwozia. Napęd bez telemetrii jest ślepy. Pracujemy jako jeden system — z regularnymi przeglądami integracji, jasnym podziałem odpowiedzialności i kulturą, w której problem zgłaszany jest wcześnie, a nie ukrywany.</p>
             </div>
           </article>
 
           <article class="team-row">
             <div class="team-text">
               <h3><span>05</span> <span data-pl="Ambicja" data-en="Ambition">Ambicja</span></h3>
-              <p data-pl="Nasz pierwszy bolid jeszcze nie istnieje, ale harmonogram, obliczenia i decyzje projektowe — już tak. Budujemy nie tylko samochód, lecz fundamenty zespołu, który będzie lepszy od nas samych."
-                 data-en="Our first car doesn't exist yet, but the schedule, calculations, and design decisions do. We're building not just a car, but the foundation of a team that will be better than ourselves.">Nasz pierwszy bolid jeszcze nie istnieje, ale harmonogram, obliczenia i decyzje projektowe — już tak. Budujemy nie tylko samochód, lecz fundamenty zespołu, który będzie lepszy od nas samych.</p>
+              <p data-pl="Nasz pierwszy bolid jeszcze nie istnieje, ale harmonogram, obliczenia i decyzje projektowe — już tak. Budujemy nie tylko samochód, lecz fundamenty zespołu, który będzie lepszy od nas samych." data-en="Our first car doesn't exist yet, but the schedule, calculations, and design decisions do. We're building not just a car, but the foundation of a team that will be better than ourselves.">Nasz pierwszy bolid jeszcze nie istnieje, ale harmonogram, obliczenia i decyzje projektowe — już tak. Budujemy nie tylko samochód, lecz fundamenty zespołu, który będzie lepszy od nas samych.</p>
             </div>
-            <div class="team-shot" data-pl="Zdjęcie 05" data-en="Photo 05">Zdjęcie 05</div>
+            <div class="team-shot" aria-hidden="true"></div>
           </article>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="brand footer-brand" href="#" aria-label="KNF strona główna">Knf<sup>®</sup></a>
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
+        <p class="footer-tagline" data-pl="Formuła Student — od podstaw." data-en="Formula Student — from scratch.">Formuła Student — od podstaw.</p>
+      </div>
       <nav class="footer-nav" aria-label="Nawigacja w stopce">
-        <a href="#projects" data-pl="Projekty" data-en="Projects">Projekty</a>
-        <a href="#about" data-pl="O nas" data-en="About">O nas</a>
+        <a href="./gallery.html" data-pl="Galeria" data-en="Gallery">Galeria</a>
+        <a href="./formula-student.html" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
+        <a href="./contact.html" data-pl="Kontakt" data-en="Contact">Kontakt</a>
       </nav>
-      <p class="footer-copy">© 2025 KNF Koło Naukowe</p>
+      <p class="footer-copy">© 2026 KNF Koło Naukowe</p>
     </div>
   </footer>
 

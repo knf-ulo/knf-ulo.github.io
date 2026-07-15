@@ -72,7 +72,7 @@ document.querySelectorAll("[data-lang-val]").forEach(btn => {
   btn.addEventListener("click", () => applyLang(btn.dataset.langVal));
 });
 
-applyLang(localStorage.getItem(LANG_KEY) || "pl");
+applyLang(localStorage.getItem(LANG_KEY) || "en");
 
 // ── Active nav on scroll ──────────────────────────────────────
 const navLinks = document.querySelectorAll(".nav-link[data-section]");
@@ -93,3 +93,42 @@ if (trackedSections.length) {
 
   trackedSections.forEach(s => navObserver.observe(s));
 }
+
+// ── Scroll reveal ─────────────────────────────────────────────
+(function () {
+  const staggerSelectors = [
+    ".project-entry",
+    ".fs-card",
+    ".fs-stat",
+    ".gallery-item",
+  ];
+  const singleSelectors = [
+    ".gallery-filters",
+    ".team-row",
+  ];
+
+  staggerSelectors.forEach(sel => {
+    document.querySelectorAll(sel).forEach((el, i) => {
+      el.classList.add("reveal");
+      el.style.transitionDelay = (i % 5) * 0.09 + "s";
+    });
+  });
+
+  singleSelectors.forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => el.classList.add("reveal"));
+  });
+
+  const all = document.querySelectorAll(".reveal");
+  if (!all.length) return;
+
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("visible");
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: "0px 0px -40px 0px", threshold: 0.06 });
+
+  all.forEach(el => revealObs.observe(el));
+})();

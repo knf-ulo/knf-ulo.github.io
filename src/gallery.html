@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Galeria KNF — dokumentacja wizualna procesu projektowania bolidu Formuły Studenckiej." />
+  <title>Galeria | KNF</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <nav class="top-nav" aria-label="Nawigacja główna">
+      <a class="brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Otwórz menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-shell" id="nav-links">
+        <a href="./index.html" class="nav-link" data-pl="Strona główna" data-en="Home">Home</a>
+        <a href="./gallery.html" class="nav-link active" data-pl="Galeria" data-en="Gallery">Galeria</a>
+        <a href="./formula-student.html" class="nav-link" data-pl="Formuła Student" data-en="Formula Student">Formuła Student</a>
+        <a href="./contact.html" class="nav-link" data-pl="Kontakt" data-en="Contact">Kontakt</a>
+
+        <div class="settings-wrap">
+          <button class="settings-btn" type="button" aria-label="Ustawienia" aria-expanded="false" aria-controls="settings-dropdown">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h8"></path>
+              <path d="M16 6h4"></path>
+              <circle cx="14" cy="6" r="2"></circle>
+              <path d="M4 12h4"></path>
+              <path d="M12 12h8"></path>
+              <circle cx="10" cy="12" r="2"></circle>
+              <path d="M4 18h10"></path>
+              <path d="M18 18h2"></path>
+              <circle cx="16" cy="18" r="2"></circle>
+            </svg>
+          </button>
+
+          <div class="settings-dropdown" id="settings-dropdown" hidden>
+            <div class="settings-row">
+              <span class="settings-label" data-pl="Motyw" data-en="Theme">Motyw</span>
+              <div class="settings-toggle">
+                <button class="toggle-btn" data-theme-val="light" data-pl="Jasny" data-en="Light">Jasny</button>
+                <button class="toggle-btn" data-theme-val="dark" data-pl="Ciemny" data-en="Dark">Ciemny</button>
+              </div>
+            </div>
+            <div class="settings-row">
+              <span class="settings-label" data-pl="Język" data-en="Language">Język</span>
+              <div class="settings-toggle">
+                <button class="toggle-btn" data-lang-val="pl">PL</button>
+                <button class="toggle-btn" data-lang-val="en">EN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="socials" aria-label="Media społecznościowe">
+        <a href="https://www.instagram.com/knf_ulo" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.4" ry="4.4"></rect>
+            <circle cx="12" cy="12" r="3.6"></circle>
+            <circle cx="17.1" cy="6.9" r="1"></circle>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <p class="hero-kicker" data-pl="KNF — Dokumentacja" data-en="KNF — Documentation">KNF — Documentation</p>
+        <h1 data-pl="Galeria" data-en="Gallery">Gallery</h1>
+        <p data-pl="Od warsztatu po tor — wizualny zapis procesu, ludzi i decyzji inżynierskich stojących za naszym pierwszym samochodem." data-en="From the workshop to the track — a visual record of the process, the people, and the engineering decisions behind our first car.">From the workshop to the track — a visual record of the process, the people, and the engineering decisions behind our first car.</p>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="gallery-filters">
+        <button class="gallery-filter active" data-pl="Wszystkie" data-en="All">All</button>
+        <button class="gallery-filter" data-category="aero" data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamics</button>
+        <button class="gallery-filter" data-category="suspension" data-pl="Zawieszenie" data-en="Suspension">Suspension</button>
+        <button class="gallery-filter" data-category="chassis" data-pl="Podwozie" data-en="Chassis">Chassis</button>
+        <button class="gallery-filter" data-category="telemetry" data-pl="Telemetria" data-en="Telemetry">Telemetry</button>
+        <button class="gallery-filter" data-category="powertrain" data-pl="Napęd" data-en="Powertrain">Powertrain</button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item gi-wide" data-category="aero">
+          <div class="gallery-placeholder"></div>
+          <p class="gallery-caption" data-pl="CFD — Skrzydło przednie, iteracja 03" data-en="CFD — Front wing, iteration 03">CFD — Front wing, iteration 03</p>
+        </div>
+
+        <div class="gallery-item gi-tall" data-category="chassis">
+          <div class="gallery-placeholder"></div>
+          <p class="gallery-caption" data-pl="Analiza MES — węzeł ramy" data-en="FEA — frame node">FEA — frame node</p>
+        </div>
+
+        <div class="gallery-item" data-category="suspension">
+          <div class="gallery-placeholder"></div>
+          <p class="gallery-caption" data-pl="Projekt CAD — zawieszenie przód" data-en="CAD — front suspension">CAD — front suspension</p>
+        </div>
+
+        <div class="gallery-item" data-category="telemetry">
+          <div class="gallery-placeholder"></div>
+          <p class="gallery-caption" data-pl="Elektronika — płytka telemetrii" data-en="Electronics — telemetry PCB">Electronics — telemetry PCB</p>
+        </div>
+
+        <div class="gallery-item gi-wide" data-category="chassis">
+          <div class="gallery-placeholder"></div>
+          <p class="gallery-caption" data-pl="Rama — wstępna konfiguracja przestrzenna" data-en="Frame — preliminary space-frame layout">Frame — preliminary space-frame layout</p>
+        </div>
+
+        <div class="gallery-item" data-category="aero">
+          <div class="gallery-placeholder"></div>
+          <p class="gallery-caption" data-pl="Dyfuzor — model kompozytowy" data-en="Diffuser — composite model">Diffuser — composite model</p>
+        </div>
+
+        <div class="gallery-item" data-category="powertrain">
+          <div class="gallery-placeholder"></div>
+          <p class="gallery-caption" data-pl="Stanowisko testowe — skrzynia biegów" data-en="Test bench — gearbox">Test bench — gearbox</p>
+        </div>
+
+        <div class="gallery-item gi-wide" data-category="suspension">
+          <div class="gallery-placeholder"></div>
+          <p class="gallery-caption" data-pl="Zebranie integracyjne — przegląd podsystemów" data-en="Integration review — subsystem check">Integration review — subsystem check</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="./index.html" aria-label="KNF strona główna">Knf<sup>®</sup></a>
+        <p class="footer-tagline" data-pl="Formuła Student — od podstaw." data-en="Formula Student — from scratch.">Formula Student — from scratch.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Nawigacja w stopce">
+        <a href="./gallery.html" data-pl="Galeria" data-en="Gallery">Gallery</a>
+        <a href="./formula-student.html" data-pl="Formuła Student" data-en="Formula Student">Formula Student</a>
+        <a href="./contact.html" data-pl="Kontakt" data-en="Contact">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 KNF Koło Naukowe</p>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script>
+    (function () {
+      const filters = document.querySelectorAll(".gallery-filter");
+      const items = document.querySelectorAll(".gallery-item");
+
+      filters.forEach(btn => {
+        btn.addEventListener("click", () => {
+          filters.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const cat = btn.dataset.category;
+          items.forEach(item => {
+            const match = !cat || item.dataset.category === cat;
+            item.style.display = match ? "" : "none";
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

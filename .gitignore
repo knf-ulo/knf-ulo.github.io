@@ -1,0 +1,18 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependencies / build (in case a toolchain is added later)
+node_modules/
+dist/
+*.log
+
+# Archives / backups (e.g. the knfW-fix.zip backup dump)
+*.zip

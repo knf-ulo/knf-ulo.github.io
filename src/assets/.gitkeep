@@ -1,0 +1,3 @@
+# Drop gallery / about photos here.
+# Referenced from the HTML as ./assets/<filename>, e.g.:
+#   <img src="./assets/frame-weld-01.jpg" alt="...">
