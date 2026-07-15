@@ -74,26 +74,6 @@ document.querySelectorAll("[data-lang-val]").forEach(btn => {
 
 applyLang(localStorage.getItem(LANG_KEY) || "en");
 
-// ── Active nav on scroll ──────────────────────────────────────
-const navLinks = document.querySelectorAll(".nav-link[data-section]");
-const sectionIds = Array.from(navLinks).map(l => l.dataset.section);
-const trackedSections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-
-if (trackedSections.length) {
-  const navObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navLinks.forEach(link => {
-          link.classList.toggle("active", link.dataset.section === id);
-        });
-      }
-    });
-  }, { rootMargin: "-40% 0px -40% 0px" });
-
-  trackedSections.forEach(s => navObserver.observe(s));
-}
-
 // ── Scroll reveal ─────────────────────────────────────────────
 (function () {
   const staggerSelectors = [
