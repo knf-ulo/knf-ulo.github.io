@@ -728,6 +728,24 @@ main {
   color: rgba(255, 255, 255, 0.28);
 }
 
+.team-shot:has(img) {
+  background: transparent;
+  border: 0;
+  overflow: hidden;
+}
+
+.team-shot:has(img)::after {
+  content: none;
+}
+
+.team-shot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 /* ── Footer ──────────────────────────────────────────────────── */
 
 .site-footer {
@@ -1101,7 +1119,27 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 240px;
+  grid-auto-flow: dense;
   gap: 12px;
+}
+
+.gallery-photo {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover .gallery-photo {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+}
+
+[data-theme="dark"] .gallery-item:hover .gallery-photo {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 .gallery-item {
