@@ -253,7 +253,9 @@ body {
   position: absolute;
   top: calc(100% + 14px);
   right: -8px;
-  width: 188px;
+  width: max-content;
+  min-width: 188px;
+  max-width: min(260px, calc(100vw - 32px));
   background: var(--pill);
   border: 1px solid var(--pill-border);
   border-radius: 14px;
