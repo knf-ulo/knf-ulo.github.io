@@ -24,26 +24,46 @@ const settingsBtn = document.querySelector(".settings-btn");
 const settingsDrop = document.getElementById("settings-dropdown");
 
 if (settingsBtn && settingsDrop) {
+  let closeTimer;
+
+  function openSettings() {
+    clearTimeout(closeTimer);
+    settingsDrop.classList.remove("closing");
+    settingsDrop.hidden = false;
+    settingsBtn.setAttribute("aria-expanded", "true");
+  }
+
+  // Play the roll-up animation, then actually hide (removed from the a11y tree)
+  function closeSettings(returnFocus) {
+    if (settingsDrop.hidden || settingsDrop.classList.contains("closing")) return;
+    settingsBtn.setAttribute("aria-expanded", "false");
+    settingsDrop.classList.add("closing");
+
+    const finish = () => {
+      settingsDrop.removeEventListener("animationend", finish);
+      clearTimeout(closeTimer);
+      if (!settingsDrop.classList.contains("closing")) return; // reopened mid-close
+      settingsDrop.hidden = true;
+      settingsDrop.classList.remove("closing");
+    };
+    settingsDrop.addEventListener("animationend", finish);
+    closeTimer = setTimeout(finish, 320); // fallback if animationend never fires
+
+    if (returnFocus) settingsBtn.focus();
+  }
+
   settingsBtn.addEventListener("click", e => {
     e.stopPropagation();
-    const opening = settingsDrop.hidden;
-    settingsDrop.hidden = !opening;
-    settingsBtn.setAttribute("aria-expanded", String(opening));
+    if (settingsDrop.hidden || settingsDrop.classList.contains("closing")) openSettings();
+    else closeSettings(false);
   });
 
   document.addEventListener("click", e => {
-    if (!settingsDrop.contains(e.target) && e.target !== settingsBtn) {
-      settingsDrop.hidden = true;
-      settingsBtn.setAttribute("aria-expanded", "false");
-    }
+    if (!settingsDrop.contains(e.target) && e.target !== settingsBtn) closeSettings(false);
   });
 
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape" && !settingsDrop.hidden) {
-      settingsDrop.hidden = true;
-      settingsBtn.setAttribute("aria-expanded", "false");
-      settingsBtn.focus();
-    }
+    if (e.key === "Escape" && !settingsDrop.hidden) closeSettings(true);
   });
 }
 

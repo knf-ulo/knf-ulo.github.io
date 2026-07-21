@@ -290,16 +290,16 @@ body {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: min(240px, calc(100vw - 24px));
+  width: min(300px, calc(100vw - 24px));
   background: var(--pill);
   border: 1px solid var(--pill-border);
   border-top: none;
   border-radius: 0 0 16px 16px;
-  padding: 16px 16px 18px;
+  padding: 14px 18px 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  align-items: stretch;
+  gap: 12px;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.38);
   z-index: 100;
 }
@@ -310,9 +310,10 @@ body {
 
 .settings-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 9px;
+  justify-content: space-between;
+  gap: 14px;
   width: 100%;
 }
 
@@ -1475,11 +1476,17 @@ main {
   to   { opacity: 0.66; transform: scale(1.6); }
 }
 
-/* Rolls open from under the navbar: the card stays put and is revealed
-   top-to-bottom via clip-path (no translate), so it reads as unrolling. */
-@keyframes settingsRoll {
-  from { clip-path: inset(0 0 100% 0); opacity: 0.35; }
+/* Rolls open/closed from under the navbar: the card stays put and is
+   revealed or hidden top-to-bottom via clip-path (no translate), so it
+   reads as unrolling down and rolling back up. */
+@keyframes settingsRollDown {
+  from { clip-path: inset(0 0 100% 0); opacity: 0.4; }
   to   { clip-path: inset(0 0 0 0);   opacity: 1; }
+}
+
+@keyframes settingsRollUp {
+  from { clip-path: inset(0 0 0 0);   opacity: 1; }
+  to   { clip-path: inset(0 0 100% 0); opacity: 0.4; }
 }
 
 /* ── Load animations ─────────────────────────────────────────── */
@@ -1506,8 +1513,12 @@ main {
   transform-origin: top center;
 }
 
-.settings-dropdown:not([hidden]) {
-  animation: settingsRoll 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+.settings-dropdown:not([hidden]):not(.closing) {
+  animation: settingsRollDown 0.24s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.settings-dropdown.closing {
+  animation: settingsRollUp 0.18s cubic-bezier(0.4, 0, 1, 1) both;
 }
 
 /* ── Scroll reveal ───────────────────────────────────────────── */
