@@ -1,0 +1,30 @@
+# KNF — Koło Naukowe Fizyków (KNF Physics Club)
+
+> KNF is a student research club in the physics faculty designing its first Formula Student race car entirely from scratch, grounding every engineering decision in physics, calculation and iterative testing. This file orients AI agents and crawlers to the club's public pages, active engineering projects, and contact channels.
+
+## Pages
+
+- [Home](https://echo-401.github.io/knfW/index.html): Club overview, the four active engineering projects, and the team's working principles.
+- [Formula Student](https://echo-401.github.io/knfW/formula-student.html): What Formula Student is, who the team is, the three-phase development timeline, and per-subsystem progress.
+- [Gallery](https://echo-401.github.io/knfW/gallery.html): Renders and photographs of the car, aerodynamics, chassis, and the team at work.
+- [Contact](https://echo-401.github.io/knfW/contact.html): How to reach the club, join the team, or partner with the project.
+
+## Projects
+
+- Aerodynamics: Formula Student aero package (front wing, rear diffuser, bodywork) developed and iterated with CFD simulation.
+- Chassis & Powertrain: Cr-Mo space frame designed with FEA for torsional stiffness and side-impact resistance per the FSG rulebook; engine, gearbox and cooling selection in parallel.
+- Software: In-house engineering tools — telemetry data analysis, a live sensor visualisation dashboard, and automation of repetitive design calculations.
+- Materials Research: Independent fatigue, sensor-calibration and supplier-datasheet-verification testing feeding a reusable knowledge base for future car generations.
+
+## Formula Student
+
+- Competition class: CV (combustion).
+- Work start year: 2025.
+- Target competition season: 2027.
+- Active engineering subsystems: 5 (Aerodynamics, Suspension, Telemetry, Chassis, Powertrain).
+- External reference: [Formula Student Poland](https://fs-poland.pl/pl/strona-glowna/)
+
+## Contact
+
+- Email: knf.pitstopfizyki@pozytywneinicjatywy.pl
+- Instagram: https://www.instagram.com/knf_ulo

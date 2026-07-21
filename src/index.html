@@ -22,11 +22,88 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" />
+
+  <link rel="canonical" href="https://echo-401.github.io/knfW/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KNF — Formula Student">
+  <meta property="og:title" content="KNF — Formula Student">
+  <meta property="og:description" content="KNF Physics Club — designing our first Formula Student car from scratch, grounding every decision in physics and rigorous engineering.">
+  <meta property="og:url" content="https://echo-401.github.io/knfW/index.html">
+  <meta property="og:image" content="https://echo-401.github.io/knfW/assets/bolid-render-iso.webp">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://echo-401.github.io/knfW/#organization",
+        "name": "KNF — Koło Naukowe Fizyków",
+        "alternateName": "KNF Physics Club",
+        "url": "https://echo-401.github.io/knfW/",
+        "logo": "https://echo-401.github.io/knfW/favicon.svg",
+        "email": "knf.pitstopfizyki@pozytywneinicjatywy.pl",
+        "foundingDate": "2025",
+        "description": "A student research club in the physics faculty designing its first Formula Student race car from scratch, grounding every decision in physics and calculation.",
+        "knowsAbout": ["Formula Student", "Automotive aerodynamics", "Computational Fluid Dynamics", "Finite Element Analysis", "Chassis design", "Vehicle telemetry", "Materials testing"],
+        "sameAs": ["https://www.instagram.com/knf_ulo"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://echo-401.github.io/knfW/#website",
+        "url": "https://echo-401.github.io/knfW/",
+        "name": "KNF — Formula Student",
+        "inLanguage": ["en", "pl"],
+        "publisher": { "@id": "https://echo-401.github.io/knfW/#organization" }
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://echo-401.github.io/knfW/#project-aerodynamics",
+        "name": "Aerodynamics",
+        "creator": { "@id": "https://echo-401.github.io/knfW/#organization" },
+        "inLanguage": "en",
+        "keywords": "CFD, front wing, rear diffuser, bodywork, downforce, drag",
+        "description": "Formula Student aero package — front wing, rear diffuser and bodywork — developed and iterated with CFD simulation."
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://echo-401.github.io/knfW/#project-chassis-powertrain",
+        "name": "Chassis & Powertrain",
+        "creator": { "@id": "https://echo-401.github.io/knfW/#organization" },
+        "inLanguage": "en",
+        "keywords": "Cr-Mo space frame, FEA, torsional stiffness, engine, gearbox, cooling",
+        "description": "A Cr-Mo space frame designed with FEA for torsional stiffness and side-impact resistance per the FSG rulebook, alongside engine, gearbox and cooling selection."
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://echo-401.github.io/knfW/#project-software",
+        "name": "Software",
+        "creator": { "@id": "https://echo-401.github.io/knfW/#organization" },
+        "inLanguage": "en",
+        "keywords": "telemetry, sensor dashboard, design automation",
+        "description": "In-house engineering tools for telemetry data analysis, live sensor visualisation, and automation of repetitive design calculations."
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://echo-401.github.io/knfW/#project-materials-research",
+        "name": "Materials Research",
+        "creator": { "@id": "https://echo-401.github.io/knfW/#organization" },
+        "inLanguage": "en",
+        "keywords": "fatigue testing, sensor calibration, datasheet verification",
+        "description": "Independent fatigue, sensor-calibration and supplier-datasheet-verification testing feeding a reusable knowledge base for future car generations."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content" data-pl="Przejdź do treści" data-en="Skip to content">Skip to content</a>
   <header class="page-header">
     <nav class="top-nav" aria-label="Main navigation">
-      <a class="brand" href="#" aria-label="KNF home">Knf<sup>®</sup></a>
+      <a class="brand" href="./index.html" aria-label="KNF home">Knf<sup>®</sup></a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -88,7 +165,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="hero-section" id="home">
       <div class="bg-angle" aria-hidden="true">
         <img class="hero-blueprint-sketch" src="./Vector.svg" aria-hidden="true" alt="">

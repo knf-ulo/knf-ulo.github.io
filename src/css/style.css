@@ -113,6 +113,40 @@ html {
   border-radius: 4px;
 }
 
+/* ── Screen-reader-only & skip link ──────────────────────────── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -56px;
+  z-index: 200;
+  padding: 10px 16px;
+  background: #2f7ee7;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: top 0.18s ease;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
 html,
 body {
   margin: 0;
@@ -1167,6 +1201,7 @@ main {
 }
 
 .gallery-item {
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
