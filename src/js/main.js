@@ -137,3 +137,43 @@ applyLang(localStorage.getItem(LANG_KEY) || "en");
 
   all.forEach(el => revealObs.observe(el));
 })();
+
+// ── Copy-to-clipboard buttons ─────────────────────────────────
+document.querySelectorAll(".contact-copy").forEach(btn => {
+  const feedback = btn.querySelector(".copy-feedback");
+  let timer;
+
+  btn.addEventListener("click", async () => {
+    const text = btn.dataset.copyEmail || "";
+    let ok = false;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      ok = true;
+    } catch (e) {
+      // Fallback for insecure contexts / older browsers
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "absolute";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+      } catch (e2) {
+        ok = false;
+      }
+    }
+
+    if (!feedback) return;
+    const lang = document.documentElement.getAttribute("lang") || "en";
+    feedback.textContent = ok
+      ? (lang === "pl" ? "Skopiowano!" : "Copied!")
+      : (lang === "pl" ? "Skopiuj ręcznie" : "Copy manually");
+    feedback.classList.add("show");
+    clearTimeout(timer);
+    timer = setTimeout(() => feedback.classList.remove("show"), 1900);
+  });
+});

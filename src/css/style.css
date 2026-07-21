@@ -250,7 +250,7 @@ body {
 /* ── Settings ────────────────────────────────────────────────── */
 
 .settings-wrap {
-  position: relative;
+  position: static;
 }
 
 .settings-btn {
@@ -283,21 +283,24 @@ body {
   stroke: #fff;
 }
 
+/* Anchored to the nav pill (.nav-shell is the positioned ancestor now that
+   .settings-wrap is static) so the card rolls out centered under the navbar. */
 .settings-dropdown {
   position: absolute;
-  top: calc(100% + 14px);
-  right: -8px;
-  width: max-content;
-  min-width: 188px;
-  max-width: min(260px, calc(100vw - 32px));
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(240px, calc(100vw - 24px));
   background: var(--pill);
   border: 1px solid var(--pill-border);
-  border-radius: 14px;
-  padding: 11px 12px;
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  padding: 16px 16px 18px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.38);
   z-index: 100;
 }
 
@@ -307,18 +310,46 @@ body {
 
 .settings-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 9px;
+  width: 100%;
 }
 
 .settings-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: 11px;
   font-weight: 600;
-  color: rgba(215, 215, 215, 0.55);
+  color: rgba(215, 215, 215, 0.62);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.settings-icon {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* Theme icon swaps with the active theme: sun in light, moon in dark. */
+.settings-icon--theme-dark {
+  display: none;
+}
+
+[data-theme="dark"] .settings-icon--theme-light {
+  display: none;
+}
+
+[data-theme="dark"] .settings-icon--theme-dark {
+  display: inline-block;
 }
 
 .settings-toggle {
@@ -726,9 +757,7 @@ main {
   transition: background 0.18s ease;
 }
 
-.team-row:hover {
-  background: rgba(255, 255, 255, 0.07);
-}
+/* team-row hover highlight removed per design request */
 
 .team-row.no-photo {
   grid-template-columns: 1fr;
@@ -987,8 +1016,7 @@ main {
   }
 
   .settings-dropdown {
-    right: 0;
-    top: calc(100% + 10px);
+    top: 100%;
   }
 
   .hero-section {
@@ -1191,14 +1219,7 @@ main {
   transition: transform 0.25s ease, box-shadow 0.2s ease;
 }
 
-.gallery-item:hover .gallery-photo {
-  transform: scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
-}
-
-[data-theme="dark"] .gallery-item:hover .gallery-photo {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-}
+/* gallery-item hover highlight (scale + shadow) removed per design request */
 
 .gallery-item {
   margin: 0;
@@ -1454,9 +1475,11 @@ main {
   to   { opacity: 0.66; transform: scale(1.6); }
 }
 
-@keyframes dropdownOpen {
-  from { opacity: 0; transform: translateY(-8px) scale(0.96); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+/* Rolls open from under the navbar: the card stays put and is revealed
+   top-to-bottom via clip-path (no translate), so it reads as unrolling. */
+@keyframes settingsRoll {
+  from { clip-path: inset(0 0 100% 0); opacity: 0.35; }
+  to   { clip-path: inset(0 0 0 0);   opacity: 1; }
 }
 
 /* ── Load animations ─────────────────────────────────────────── */
@@ -1480,11 +1503,11 @@ main {
 /* ── Settings dropdown entrance ──────────────────────────────── */
 
 .settings-dropdown {
-  transform-origin: top right;
+  transform-origin: top center;
 }
 
 .settings-dropdown:not([hidden]) {
-  animation: dropdownOpen 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: settingsRoll 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* ── Scroll reveal ───────────────────────────────────────────── */
@@ -1635,4 +1658,66 @@ main {
 [data-theme="dark"] .contact-link:hover {
   border-color: rgba(47, 126, 231, 0.4);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Copy-email button ───────────────────────────────────────── */
+
+.contact-copy {
+  position: relative;
+  width: 100%;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.contact-copy-email {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-copy-hint {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.18s ease;
+}
+
+.contact-copy:hover .contact-copy-hint {
+  opacity: 0.85;
+}
+
+.contact-copy-hint svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.copy-feedback {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%) scale(0.9);
+  background: #2f7ee7;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 5px 11px;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.copy-feedback.show {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
 }
