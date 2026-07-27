@@ -4,10 +4,10 @@
 
 ## Pages
 
-- [Home](https://echo-401.github.io/knfW/index.html): Club overview, the four active engineering projects, and the team's working principles.
-- [Formula Student](https://echo-401.github.io/knfW/formula-student.html): What Formula Student is, who the team is, the three-phase development timeline, and per-subsystem progress.
-- [Gallery](https://echo-401.github.io/knfW/gallery.html): Renders and photographs of the car, aerodynamics, chassis, and the team at work.
-- [Contact](https://echo-401.github.io/knfW/contact.html): How to reach the club, join the team, or partner with the project.
+- [Home](https://alexander-288.github.io/knfW/index.html): Club overview, the four active engineering projects, and the team's working principles.
+- [Formula Student](https://alexander-288.github.io/knfW/formula-student.html): What Formula Student is, who the team is, the three-phase development timeline, and per-subsystem progress.
+- [Gallery](https://alexander-288.github.io/knfW/gallery.html): Renders and photographs of the car, aerodynamics, chassis, and the team at work.
+- [Contact](https://alexander-288.github.io/knfW/contact.html): How to reach the club, join the team, or partner with the project.
 
 ## Projects
 
