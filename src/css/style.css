@@ -287,14 +287,13 @@ body {
    .settings-wrap is static) so the card rolls out centered under the navbar. */
 .settings-dropdown {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
   width: min(300px, calc(100vw - 24px));
   background: var(--pill);
   border: 1px solid var(--pill-border);
-  border-top: none;
-  border-radius: 0 0 16px 16px;
+  border-radius: 16px;
   padding: 14px 18px 16px;
   display: flex;
   flex-direction: column;
@@ -1479,14 +1478,17 @@ main {
 /* Rolls open/closed from under the navbar: the card stays put and is
    revealed or hidden top-to-bottom via clip-path (no translate), so it
    reads as unrolling down and rolling back up. */
+/* Negative side/bottom insets keep the clip region wider than the card so the
+   drop shadow isn't clipped into a hard-edged rectangle; the bottom value wipes
+   from 100% (hidden) down past the card for the top-to-bottom reveal. */
 @keyframes settingsRollDown {
-  from { clip-path: inset(0 0 100% 0); opacity: 0.4; }
-  to   { clip-path: inset(0 0 0 0);   opacity: 1; }
+  from { clip-path: inset(-20px -40px 100% -40px); opacity: 0.4; }
+  to   { clip-path: inset(-20px -40px -52px -40px); opacity: 1; }
 }
 
 @keyframes settingsRollUp {
-  from { clip-path: inset(0 0 0 0);   opacity: 1; }
-  to   { clip-path: inset(0 0 100% 0); opacity: 0.4; }
+  from { clip-path: inset(-20px -40px -52px -40px); opacity: 1; }
+  to   { clip-path: inset(-20px -40px 100% -40px); opacity: 0.4; }
 }
 
 /* ── Load animations ─────────────────────────────────────────── */
