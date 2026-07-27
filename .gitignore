@@ -16,3 +16,8 @@ dist/
 
 # Archives / backups (e.g. the knfW-fix.zip backup dump)
 *.zip
+
+# Local tooling / scratch (not part of the site)
+.claude/
+temp/
+.playwright-mcp/
