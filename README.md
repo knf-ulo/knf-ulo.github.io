@@ -3,7 +3,7 @@
 Website for **KNF**, a student physics society building its first Formula Student car.
 Static, bilingual (Polish / English), light & dark themes, no build step.
 
-**Live site:** https://alexander-288.github.io/knfW/
+**Live site:** https://knf-ulo.github.io/
 
 ---
 

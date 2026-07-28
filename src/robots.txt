@@ -4,6 +4,6 @@ User-agent: *
 Allow: /
 
 # AI / LLM agent orientation file:
-# https://alexander-288.github.io/knfW/llms.txt
+# https://knf-ulo.github.io/llms.txt
 
-Sitemap: https://alexander-288.github.io/knfW/sitemap.xml
+Sitemap: https://knf-ulo.github.io/sitemap.xml
