@@ -18,6 +18,7 @@ dist/
 *.zip
 
 # Local tooling / scratch (not part of the site)
+.agents/
 .claude/
 temp/
 .playwright-mcp/
