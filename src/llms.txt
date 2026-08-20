@@ -4,12 +4,15 @@
 
 ## Pages
 
-- [Home](https://knf-ulo.github.io/index.html): Club overview, the four active engineering projects, and the team's working principles.
+- [Home](https://knf-ulo.github.io/index.html): Club overview, the four active engineering areas, and the team's working principles.
 - [Formula Student](https://knf-ulo.github.io/formula-student.html): What Formula Student is, who the team is, the three-phase development timeline, and per-subsystem progress.
 - [Gallery](https://knf-ulo.github.io/gallery.html): Renders and photographs of the car, aerodynamics, chassis, and the team at work.
 - [Contact](https://knf-ulo.github.io/contact.html): How to reach the club, join the team, or partner with the project.
 
-## Projects
+## Engineering areas
+
+Four project areas group the car's five subsystems together with software and independent research.
+
 
 - Aerodynamics: Formula Student aero package (front wing, rear diffuser, bodywork) developed and iterated with CFD simulation.
 - Chassis & Powertrain: Cr-Mo space frame designed with FEA for torsional stiffness and side-impact resistance per the FSG rulebook; engine, gearbox and cooling selection in parallel.
@@ -21,7 +24,7 @@
 - Competition class: CV (combustion).
 - Work start year: 2025.
 - Target competition season: 2027.
-- Active engineering subsystems: 5 (Aerodynamics, Suspension, Telemetry, Chassis, Powertrain).
+- Active car subsystems: 5 (Aerodynamics, Suspension, Telemetry, Chassis, Powertrain), grouped into the four engineering areas above.
 - External reference: [Formula Student Poland](https://fs-poland.pl/pl/strona-glowna/)
 
 ## Contact

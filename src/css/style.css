@@ -499,6 +499,10 @@ main {
   text-wrap: balance;
 }
 
+html[lang="pl"] .hero-content h1 {
+  font-size: clamp(25px, 3.7vw, 46px);
+}
+
 .hero-content > p {
   margin: 0;
   max-width: 34ch;
