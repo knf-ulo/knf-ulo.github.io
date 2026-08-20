@@ -1,6 +1,6 @@
 # KNF — Koło Naukowe Fizyków (KNF Physics Club)
 
-> KNF is a student research club in the physics faculty designing its first Formula Student race car entirely from scratch, grounding every engineering decision in physics, calculation and iterative testing. This file orients AI agents and crawlers to the club's public pages, active engineering projects, and contact channels.
+> KNF is a high school physics club at Uniwersyteckie Liceum Ogólnokształcące im. Pawła Adamowicza in Gdańsk (ULO), designing its first Formula Student race car entirely from scratch, grounding every engineering decision in physics, calculation and iterative testing. This file orients AI agents and crawlers to the club's public pages, active engineering projects, and contact channels.
 
 ## Pages
 
