@@ -52,7 +52,120 @@
   opacity: 0.75;
 }
 
-[data-theme="dark"] .gallery-caption {
+[data-theme="dark"] /* ── Instagram facade cards ──────────────────────────────────── */
+
+.social-facade {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--section-alt-bg);
+  cursor: pointer;
+  display: block;
+  transition: box-shadow 0.2s ease;
+}
+
+.social-thumb {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Keeps the caption and cue legible over any thumbnail */
+.social-facade::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 45%);
+  pointer-events: none;
+}
+
+.social-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 1;
+}
+
+.social-badge svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: #262626;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-cue {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.85;
+  transition: opacity 0.18s ease;
+}
+
+.social-facade:hover .social-cue,
+.social-facade:focus-visible .social-cue {
+  opacity: 1;
+}
+
+.social-facade:focus-visible {
+  outline: 2px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
+.social-card.is-loading .social-cue::after {
+  content: "6";
+}
+
+/* Cards still carrying placeholder content: inert, and visibly unfinished */
+.social-card--todo .social-facade {
+  cursor: default;
+  border: 1.5px dashed rgba(0, 0, 0, 0.14);
+}
+
+[data-theme="dark"] .social-card--todo .social-facade {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* The embed keeps the cell's height and scrolls inside it, so a late-resizing
+   Instagram iframe can never reflow the surrounding grid. */
+.social-embed {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow: auto;
+  border-radius: 10px;
+  background: var(--section-alt-bg);
+  -webkit-overflow-scrolling: touch;
+}
+
+.social-embed .instagram-media {
+  min-width: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  border-radius: 10px !important;
+}
+
+.gallery-caption {
   opacity: 0.72;
 }
 
@@ -1294,6 +1407,11 @@ html[lang="pl"] .hero-content h1 {
   .gallery-item.gi-tall {
     grid-column: auto;
     grid-row: auto;
+  }
+
+  /* Social cards keep a two-row cell so the portrait ratio survives on phones */
+  .gallery-item.social-card {
+    grid-row: span 2;
   }
 
   .subpage-hero-inner h1 {
