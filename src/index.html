@@ -17,7 +17,9 @@
     })();
   </script>
   <meta name="theme-color" content="#f2f0ec">
+  <link rel="icon" href="./favicon.ico" sizes="48x48">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
@@ -29,7 +31,9 @@
   <meta property="og:title" content="KNF | Formula Student">
   <meta property="og:description" content="KNF Physics Club, designing our first Formula Student car from scratch, grounding every decision in physics and rigorous engineering.">
   <meta property="og:url" content="https://knf-ulo.github.io/index.html">
-  <meta property="og:image" content="https://knf-ulo.github.io/assets/bolid-render-front34.webp">
+  <meta property="og:image" content="https://knf-ulo.github.io/assets/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="pl_PL">
   <meta name="twitter:card" content="summary_large_image">
@@ -217,7 +221,7 @@
       </div>
 
       <div class="hero-content">
-        <p class="hero-kicker" data-pl="Koło Naukowe Fizyków" data-en="Physics Club">Physics Club</p>
+        <p class="hero-kicker" data-pl="Koło fizyków · Formuła Student" data-en="Physics club · Formula Student">Physics club · Formula Student</p>
         <h1 data-pl="Jeszcze bez bolidu. Już na pełnych obrotach." data-en="No car yet. Already flat out.">No car yet. Already flat out.</h1>
         <p data-pl="Projektujemy pierwszy bolid Formuły Student od zera. Każda decyzja opiera się na obliczeniach, każda iteracja przybliża nas do toru." data-en="We're designing our first Formula Student car from scratch. Every decision is grounded in calculation, and every iteration brings us closer to the track.">We're designing our first Formula Student car from scratch. Every decision is grounded in calculation, and every iteration brings us closer to the track.</p>
         <div class="hero-actions">
@@ -231,7 +235,7 @@
       <div class="projects-inner">
         <header class="projects-header">
           <h2 data-pl="Projekty" data-en="Projects">Projects</h2>
-          <p data-pl="Nasze aktywne obszary inżynierskie: pięć podsystemów bolidu, oprogramowanie i badania własne." data-en="Our active engineering areas: the car's five subsystems, plus software and independent research.">Our active engineering areas: the car's five subsystems, plus software and independent research.</p>
+          <p data-pl="Nad czym teraz pracujemy: od samego bolidu po narzędzia i testy, które za nim stoją." data-en="What we're working on right now, from the car itself to the tools and tests behind it.">What we're working on right now, from the car itself to the tools and tests behind it.</p>
           <a class="photo-stack" href="./gallery.html">
             <span class="photo-stack-pile" aria-hidden="true">
               <img class="ps-1" src="./assets/team-school.webp" alt="" loading="lazy">
@@ -249,11 +253,11 @@
         <ol class="projects-list">
           <li class="project-entry">
             <span class="pe-title" data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamics</span>
-            <span class="pe-desc" data-pl="Projektujemy pakiet aero bolidu Formuły Student (skrzydło przednie, dyfuzor tylny i elementy nadwozia) przy użyciu symulacji CFD. Iteracyjnie dopracowujemy geometrię profili, analizujemy docisk i opór w różnych konfiguracjach, a każda zmiana jest weryfikowana ilościowo przed przejściem do kolejnej wersji." data-en="We design the Formula Student aero package (front wing, rear diffuser and bodywork) using CFD simulation. We iterate aerofoil geometry, analyse downforce and drag across configurations, and every change is verified quantitatively before moving to the next revision.">We design the Formula Student aero package (front wing, rear diffuser and bodywork) using CFD simulation. We iterate aerofoil geometry, analyse downforce and drag across configurations, and every change is verified quantitatively before moving to the next revision.</span>
+            <span class="pe-desc" data-pl="Projektujemy pakiet aero bolidu Formuły Student (skrzydło przednie, dyfuzor tylny i elementy nadwozia) przy użyciu symulacji przepływu powietrza (CFD). Iteracyjnie dopracowujemy geometrię profili, analizujemy docisk i opór w różnych konfiguracjach, a każda zmiana jest weryfikowana ilościowo przed przejściem do kolejnej wersji." data-en="We design the Formula Student aero package (front wing, rear diffuser and bodywork) using computational fluid dynamics (CFD), which simulates the airflow. We iterate aerofoil geometry, analyse downforce and drag across configurations, and every change is verified quantitatively before moving to the next revision.">We design the Formula Student aero package (front wing, rear diffuser and bodywork) using computational fluid dynamics (CFD), which simulates the airflow. We iterate aerofoil geometry, analyse downforce and drag across configurations, and every change is verified quantitatively before moving to the next revision.</span>
           </li>
           <li class="project-entry">
             <span class="pe-title" data-pl="Podwozie i napęd" data-en="Chassis &amp; Powertrain">Chassis &amp; Powertrain</span>
-            <span class="pe-desc" data-pl="Rama przestrzenna ze stali Cr-Mo projektowana z użyciem analizy MES pod kątem sztywności skrętnej i odporności na zderzenie boczne zgodnie z regulaminem FSG. Równolegle dobieramy jednostkę napędową, skrzynię biegów i układ chłodzenia. Przy każdej decyzji ważymy masę, niezawodność i zgodność z przepisami." data-en="A Cr-Mo space frame designed with FEA for torsional stiffness and side-impact resistance per the FSG rulebook. In parallel we select the engine, gearbox and cooling system, weighing every decision by mass, reliability and regulatory compliance.">A Cr-Mo space frame designed with FEA for torsional stiffness and side-impact resistance per the FSG rulebook. In parallel we select the engine, gearbox and cooling system, weighing every decision by mass, reliability and regulatory compliance.</span>
+            <span class="pe-desc" data-pl="Rama przestrzenna ze stali chromowo-molibdenowej (Cr-Mo), projektowana z użyciem analizy metodą elementów skończonych (MES) pod kątem sztywności skrętnej i odporności na zderzenie boczne zgodnie z regulaminem Formula Student Germany (FSG). Równolegle dobieramy jednostkę napędową, skrzynię biegów i układ chłodzenia. Przy każdej decyzji ważymy masę, niezawodność i zgodność z przepisami." data-en="A chromoly steel (Cr-Mo) space frame, designed with finite element analysis (FEA) for torsional stiffness and side-impact resistance under the Formula Student Germany (FSG) rulebook. In parallel we select the engine, gearbox and cooling system, weighing every decision by mass, reliability and regulatory compliance.">A chromoly steel (Cr-Mo) space frame, designed with finite element analysis (FEA) for torsional stiffness and side-impact resistance under the Formula Student Germany (FSG) rulebook. In parallel we select the engine, gearbox and cooling system, weighing every decision by mass, reliability and regulatory compliance.</span>
           </li>
           <li class="project-entry">
             <span class="pe-title" data-pl="Oprogramowanie" data-en="Software">Software</span>

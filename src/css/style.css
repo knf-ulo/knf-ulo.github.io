@@ -500,6 +500,7 @@ main {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  text-wrap: balance;
 }
 
 .hero-content h1 {
@@ -1216,6 +1217,13 @@ html[lang="pl"] .hero-content h1 {
 @media (max-width: 600px) {
   .subpage-hero-inner h1 {
     font-size: 32px;
+  }
+
+  /* Card sits on the bottom edge of the blueprint instead of floating mid-screen */
+  .hero-section {
+    min-height: 0;
+    align-items: flex-end;
+    padding: 38vh 16px 36px;
   }
 }
 
