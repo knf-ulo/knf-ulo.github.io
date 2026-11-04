@@ -29,7 +29,7 @@
   <meta property="og:title" content="Gallery | KNF">
   <meta property="og:description" content="KNF gallery — a visual record of designing our Formula Student car.">
   <meta property="og:url" content="https://knf-ulo.github.io/gallery.html">
-  <meta property="og:image" content="https://knf-ulo.github.io/assets/bolid-render-iso.webp">
+  <meta property="og:image" content="https://knf-ulo.github.io/assets/bolid-render-front34.webp">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="pl_PL">
   <meta name="twitter:card" content="summary_large_image">
@@ -44,17 +44,20 @@
     "inLanguage": ["en", "pl"],
     "about": { "@id": "https://knf-ulo.github.io/#organization" },
     "associatedMedia": [
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/bolid-render-iso.webp", "caption": "Full car — isometric render" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/bolid-render-top.webp", "caption": "Full car — top view" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/aero-fwing-0.webp", "caption": "Front wing — CFD 01" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/aero-fwing-1.webp", "caption": "Front wing — CFD 02" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/bolid-render-top-better.webp", "caption": "Full car — final render" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/chasis-render-iso.webp", "caption": "Frame — isometric render" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/team-2.webp", "caption": "Team — at work" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/aero-fwing-2.webp", "caption": "Front wing — CFD 03" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/chasis-render-side.webp", "caption": "Frame — side view" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/team-0.webp", "caption": "Team — meeting" },
-      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/team-1.webp", "caption": "Team — design review" }
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/bolid-render-front34.webp", "caption": "Full car — front three-quarter" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/bolid-render-topdown.webp", "caption": "Full car — top view" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/bolid-render-backlit.webp", "caption": "Full car — backlit studio render" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/bolid-render-front-low.webp", "caption": "Full car — low front view" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/aero-fwing-pathlines.webp", "caption": "Front wing — CFD pathlines" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/aero-fwing-contour.webp", "caption": "Front wing — 2D velocity field (CFD)" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/chasis-render-front34.webp", "caption": "Frame — front three-quarter" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/chasis-render-tubes.webp", "caption": "Frame — tubular space frame render" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/chasis-suspension-concept.webp", "caption": "Suspension concept — rolling chassis" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/chasis-fea-deformation.webp", "caption": "Frame — FEA, total deformation" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/team-karting.webp", "caption": "Team — karting day" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/team-1.webp", "caption": "Team — design review" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/team-school.webp", "caption": "Team — in front of ULO" },
+      { "@type": "ImageObject", "contentUrl": "https://knf-ulo.github.io/assets/team-0.webp", "caption": "Team — meeting" }
     ]
   }
   </script>
@@ -166,106 +169,65 @@
         <button class="gallery-filter" type="button" aria-pressed="false" data-category="aero" data-pl="Aerodynamika" data-en="Aerodynamics">Aerodynamics</button>
         <button class="gallery-filter" type="button" aria-pressed="false" data-category="chassis" data-pl="Podwozie" data-en="Chassis">Chassis</button>
         <button class="gallery-filter" type="button" aria-pressed="false" data-category="team" data-pl="Zespół" data-en="Team">Team</button>
-        <button class="gallery-filter" type="button" aria-pressed="false" data-category="social" data-pl="Social media" data-en="Socials">Socials</button>
       </div>
 
       <div class="gallery-grid">
-        <figure class="gallery-item gi-wide" data-category="render">
-          <img class="gallery-photo" src="./assets/bolid-render-iso.webp" alt="Full car — isometric render" loading="lazy">
-          <figcaption class="gallery-caption" data-pl="Bolid — render izometryczny" data-en="Full car — isometric render">Full car — isometric render</figcaption>
+        <figure class="gallery-item gi-wide gi-tall" data-category="render">
+          <img class="gallery-photo" src="./assets/bolid-render-front34.webp" alt="Full car — render from the front three-quarter angle" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Bolid — widok trzy czwarte z przodu" data-en="Full car — front three-quarter">Full car — front three-quarter</figcaption>
         </figure>
-
         <figure class="gallery-item gi-tall" data-category="render">
-          <img class="gallery-photo" src="./assets/bolid-render-top.webp" alt="Full car — top view" loading="lazy">
+          <img class="gallery-photo" src="./assets/bolid-render-topdown.webp" alt="Full car — render from directly above" loading="lazy">
           <figcaption class="gallery-caption" data-pl="Bolid — rzut z góry" data-en="Full car — top view">Full car — top view</figcaption>
         </figure>
-
-        <figure class="gallery-item" data-category="aero">
-          <img class="gallery-photo" src="./assets/aero-fwing-0.webp" alt="Front wing — CFD 01" loading="lazy">
-          <figcaption class="gallery-caption" data-pl="Skrzydło przednie — CFD 01" data-en="Front wing — CFD 01">Front wing — CFD 01</figcaption>
+        <figure class="gallery-item gi-tall" data-category="render">
+          <img class="gallery-photo" src="./assets/bolid-render-backlit.webp" alt="Full car — backlit studio render" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Bolid — render studyjny pod światło" data-en="Full car — backlit studio render">Full car — backlit studio render</figcaption>
         </figure>
-
-        <!-- Instagram card 1 — facade only; the real embed loads on click.
-             TODO: set data-permalink to the post URL, e.g. https://www.instagram.com/p/XXXXXXXXXXX/
-             TODO: replace ./assets/social-placeholder.svg with a local .webp thumbnail of that post
-             TODO: replace the caption text below with the real one -->
-        <figure class="gallery-item gi-tall social-card" data-category="social" data-platform="instagram" data-permalink="TODO">
-          <button class="social-facade" type="button">
-            <img class="social-thumb" src="./assets/social-placeholder.svg" alt="" loading="lazy">
-            <span class="social-badge" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.4" ry="4.4"></rect><circle cx="12" cy="12" r="3.6"></circle><circle cx="17.1" cy="6.9" r="1"></circle></svg></span>
-            <span class="sr-only" data-pl="Wczytaj post 1 z Instagrama" data-en="Load Instagram post 1">Load Instagram post 1</span>
-            <span class="social-cue" aria-hidden="true" data-pl="Wczytaj post" data-en="Load post">Load post</span>
-          </button>
-          <figcaption class="gallery-caption" data-pl="Instagram — post 1" data-en="Instagram — post 1">Instagram — post 1</figcaption>
+        <figure class="gallery-item gi-wide gi-tall" data-category="render">
+          <img class="gallery-photo" src="./assets/bolid-render-front-low.webp" alt="Full car — low front render in a studio" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Bolid — widok z przodu, nisko" data-en="Full car — low front view">Full car — low front view</figcaption>
         </figure>
-
-        <figure class="gallery-item" data-category="aero">
-          <img class="gallery-photo" src="./assets/aero-fwing-1.webp" alt="Front wing — CFD 02" loading="lazy">
-          <figcaption class="gallery-caption" data-pl="Skrzydło przednie — CFD 02" data-en="Front wing — CFD 02">Front wing — CFD 02</figcaption>
-        </figure>
-
-        <figure class="gallery-item gi-wide" data-category="render">
-          <img class="gallery-photo" src="./assets/bolid-render-top-better.webp" alt="Full car — final render" loading="lazy">
-          <figcaption class="gallery-caption" data-pl="Bolid — render finalny" data-en="Full car — final render">Full car — final render</figcaption>
-        </figure>
-
-        <figure class="gallery-item" data-category="chassis">
-          <img class="gallery-photo" src="./assets/chasis-render-iso.webp" alt="Frame — isometric render" loading="lazy">
-          <figcaption class="gallery-caption" data-pl="Rama — render izometryczny" data-en="Frame — isometric render">Frame — isometric render</figcaption>
-        </figure>
-
-        <figure class="gallery-item gi-tall" data-category="team">
-          <img class="gallery-photo" src="./assets/team-2.webp" alt="Team — at work" loading="lazy">
-          <figcaption class="gallery-caption" data-pl="Zespół — przy pracy" data-en="Team — at work">Team — at work</figcaption>
-        </figure>
-
-        <!-- Instagram card 2 — facade only; the real embed loads on click.
-             TODO: set data-permalink to the post URL, e.g. https://www.instagram.com/p/XXXXXXXXXXX/
-             TODO: replace ./assets/social-placeholder.svg with a local .webp thumbnail of that post
-             TODO: replace the caption text below with the real one -->
-        <figure class="gallery-item gi-tall social-card" data-category="social" data-platform="instagram" data-permalink="TODO">
-          <button class="social-facade" type="button">
-            <img class="social-thumb" src="./assets/social-placeholder.svg" alt="" loading="lazy">
-            <span class="social-badge" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.4" ry="4.4"></rect><circle cx="12" cy="12" r="3.6"></circle><circle cx="17.1" cy="6.9" r="1"></circle></svg></span>
-            <span class="sr-only" data-pl="Wczytaj post 2 z Instagrama" data-en="Load Instagram post 2">Load Instagram post 2</span>
-            <span class="social-cue" aria-hidden="true" data-pl="Wczytaj post" data-en="Load post">Load post</span>
-          </button>
-          <figcaption class="gallery-caption" data-pl="Instagram — post 2" data-en="Instagram — post 2">Instagram — post 2</figcaption>
-        </figure>
-
         <figure class="gallery-item gi-wide" data-category="aero">
-          <img class="gallery-photo" src="./assets/aero-fwing-2.webp" alt="Front wing — CFD 03" loading="lazy">
-          <figcaption class="gallery-caption" data-pl="Skrzydło przednie — CFD 03" data-en="Front wing — CFD 03">Front wing — CFD 03</figcaption>
+          <img class="gallery-photo" src="./assets/aero-fwing-pathlines.webp" alt="Front wing — CFD pathlines coloured by velocity magnitude" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Skrzydło przednie — linie prądu (CFD)" data-en="Front wing — CFD pathlines">Front wing — CFD pathlines</figcaption>
         </figure>
-
+        <figure class="gallery-item" data-category="aero">
+          <img class="gallery-photo" src="./assets/aero-fwing-contour.webp" alt="Front wing — 2D CFD velocity contours around the multi-element profile" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Skrzydło przednie — pole prędkości 2D (CFD)" data-en="Front wing — 2D velocity field (CFD)">Front wing — 2D velocity field (CFD)</figcaption>
+        </figure>
+        <figure class="gallery-item gi-tall" data-category="chassis">
+          <img class="gallery-photo" src="./assets/chasis-render-front34.webp" alt="Frame — tubular steel space frame seen from the front three-quarter angle" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Rama — widok trzy czwarte z przodu" data-en="Frame — front three-quarter">Frame — front three-quarter</figcaption>
+        </figure>
+        <figure class="gallery-item gi-wide" data-category="chassis">
+          <img class="gallery-photo" src="./assets/chasis-render-tubes.webp" alt="Frame — tubular steel space frame render, side three-quarter view" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Rama — render kratownicy rurowej" data-en="Frame — tubular space frame render">Frame — tubular space frame render</figcaption>
+        </figure>
         <figure class="gallery-item" data-category="chassis">
-          <img class="gallery-photo" src="./assets/chasis-render-side.webp" alt="Frame — side view" loading="lazy">
-          <figcaption class="gallery-caption" data-pl="Rama — widok z boku" data-en="Frame — side view">Frame — side view</figcaption>
+          <img class="gallery-photo" src="./assets/chasis-suspension-concept.webp" alt="Frame with suspension, dampers and wheels fitted — suspension concept render" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Zawieszenie — koncepcja, rama z kołami" data-en="Suspension concept — rolling chassis">Suspension concept — rolling chassis</figcaption>
         </figure>
-
+        <figure class="gallery-item" data-category="chassis">
+          <img class="gallery-photo" src="./assets/chasis-fea-deformation.webp" alt="Frame — Ansys static structural analysis, total deformation" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Rama — analiza MES, odkształcenie całkowite" data-en="Frame — FEA, total deformation">Frame — FEA, total deformation</figcaption>
+        </figure>
+        <figure class="gallery-item gi-wide" data-category="team">
+          <img class="gallery-photo" src="./assets/team-karting.webp" alt="The KNF team on the podium at a karting track" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Zespół — wyjazd na gokarty" data-en="Team — karting day">Team — karting day</figcaption>
+        </figure>
+        <figure class="gallery-item gi-tall" data-category="team">
+          <img class="gallery-photo" src="./assets/team-1.webp" alt="Team — design review" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Zespół — przegląd projektu" data-en="Team — design review">Team — design review</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="team">
+          <img class="gallery-photo" src="./assets/team-school.webp" alt="The KNF team on the steps in front of ULO in Gdańsk" loading="lazy">
+          <figcaption class="gallery-caption" data-pl="Zespół — przed ULO" data-en="Team — in front of ULO">Team — in front of ULO</figcaption>
+        </figure>
         <figure class="gallery-item" data-category="team">
           <img class="gallery-photo" src="./assets/team-0.webp" alt="Team — meeting" loading="lazy">
           <figcaption class="gallery-caption" data-pl="Zespół — spotkanie" data-en="Team — meeting">Team — meeting</figcaption>
         </figure>
-
-        <figure class="gallery-item" data-category="team">
-          <img class="gallery-photo" src="./assets/team-1.webp" alt="Team — design review" loading="lazy">
-          <figcaption class="gallery-caption" data-pl="Zespół — przegląd projektu" data-en="Team — design review">Team — design review</figcaption>
-        </figure>
-        <!-- Instagram card 3 — facade only; the real embed loads on click.
-             TODO: set data-permalink to the post URL, e.g. https://www.instagram.com/p/XXXXXXXXXXX/
-             TODO: replace ./assets/social-placeholder.svg with a local .webp thumbnail of that post
-             TODO: replace the caption text below with the real one -->
-        <figure class="gallery-item gi-tall social-card" data-category="social" data-platform="instagram" data-permalink="TODO">
-          <button class="social-facade" type="button">
-            <img class="social-thumb" src="./assets/social-placeholder.svg" alt="" loading="lazy">
-            <span class="social-badge" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.4" ry="4.4"></rect><circle cx="12" cy="12" r="3.6"></circle><circle cx="17.1" cy="6.9" r="1"></circle></svg></span>
-            <span class="sr-only" data-pl="Wczytaj post 3 z Instagrama" data-en="Load Instagram post 3">Load Instagram post 3</span>
-            <span class="social-cue" aria-hidden="true" data-pl="Wczytaj post" data-en="Load post">Load post</span>
-          </button>
-          <figcaption class="gallery-caption" data-pl="Instagram — post 3" data-en="Instagram — post 3">Instagram — post 3</figcaption>
-        </figure>
-
       </div>
     </section>
   </main>
@@ -305,89 +267,6 @@
           items.forEach(item => {
             const match = !cat || item.dataset.category === cat;
             item.style.display = match ? "" : "none";
-          });
-        });
-      });
-    })();
-
-    /* Instagram facade cards.
-       Nothing from Instagram is requested until a visitor clicks a card — the
-       grid ships with local thumbnails only, so no third-party script or cookie
-       is loaded by default. */
-    (function () {
-      const EMBED_SRC = "https://www.instagram.com/embed.js";
-      let scriptPromise = null;
-
-      function loadEmbedScript() {
-        if (scriptPromise) return scriptPromise;
-        scriptPromise = new Promise((resolve, reject) => {
-          const tag = document.createElement("script");
-          tag.src = EMBED_SRC;
-          tag.async = true;
-          tag.onload = resolve;
-          tag.onerror = () => {
-            scriptPromise = null; // allow a later card to retry
-            reject(new Error("instagram embed.js failed to load"));
-          };
-          document.body.appendChild(tag);
-        });
-        return scriptPromise;
-      }
-
-      // Replace the caption with a plain link out, so a failed embed still
-      // leaves the visitor somewhere to go.
-      function degradeToLink(card, permalink) {
-        const caption = card.querySelector(".gallery-caption");
-        if (!caption || caption.querySelector("a")) return;
-        const text = caption.textContent;
-        const link = document.createElement("a");
-        link.href = permalink;
-        link.target = "_blank";
-        link.rel = "noopener";
-        link.textContent = text;
-        caption.textContent = "";
-        caption.appendChild(link);
-      }
-
-      document.querySelectorAll(".social-card").forEach(card => {
-        const facade = card.querySelector(".social-facade");
-        const permalink = card.dataset.permalink;
-        if (!facade) return;
-
-        // Cards still holding placeholder content stay inert rather than
-        // requesting a nonexistent post.
-        if (!permalink || permalink === "TODO") {
-          facade.disabled = true;
-          card.classList.add("social-card--todo");
-          return;
-        }
-
-        facade.addEventListener("click", () => {
-          if (card.classList.contains("is-loading") || card.classList.contains("is-loaded")) return;
-          card.classList.add("is-loading");
-
-          loadEmbedScript().then(() => {
-            const quote = document.createElement("blockquote");
-            quote.className = "instagram-media";
-            quote.setAttribute("data-instgrm-permalink", permalink);
-            quote.setAttribute("data-instgrm-version", "14");
-
-            const frame = document.createElement("div");
-            frame.className = "social-embed";
-            frame.appendChild(quote);
-
-            facade.replaceWith(frame);
-            card.classList.remove("is-loading");
-            card.classList.add("is-loaded");
-
-            if (window.instgrm && window.instgrm.Embeds) {
-              window.instgrm.Embeds.process();
-            }
-          }).catch(() => {
-            // Keep the facade; give the caption a way out instead.
-            card.classList.remove("is-loading");
-            card.classList.add("social-card--failed");
-            degradeToLink(card, permalink);
           });
         });
       });
