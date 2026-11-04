@@ -119,7 +119,6 @@ applyLang(localStorage.getItem(LANG_KEY) || "en");
     ".project-entry",
     ".fs-card",
     ".fs-stat",
-    ".gallery-item",
   ];
   const singleSelectors = [
     ".gallery-filters",
