@@ -616,8 +616,13 @@ html[lang="pl"] .hero-content h1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: flex-start;
+}
+
+/* Same width as the photo stack, so the button sits under its middle */
+.projects-header .projects-links-group {
   align-items: center;
-  width: min(300px, 100%); /* same width as the photo stack, so the button sits under its middle */
+  width: min(300px, 100%);
 }
 
 .projects-page-link {
@@ -2536,13 +2541,6 @@ html:has(.pin-dialog[open]) {
 .tl .is-next .tl-step {
   color: var(--brand-color);
   opacity: 0.7;
-}
-
-.tl .is-goal .tl-rail::after {
-  width: 16px;
-  height: 16px;
-  margin-left: -8px;
-  border-color: var(--tl-accent);
 }
 
 /* Subsystem status inside the "now" block */
