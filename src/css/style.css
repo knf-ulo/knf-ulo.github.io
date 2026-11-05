@@ -616,7 +616,8 @@ html[lang="pl"] .hero-content h1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: flex-start;
+  align-items: center;
+  width: min(300px, 100%); /* same width as the photo stack, so the button sits under its middle */
 }
 
 .projects-page-link {
@@ -2205,15 +2206,15 @@ html:has(.pin-dialog[open]) {
 
 .contact-follow {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 380px);
-  gap: 40px 64px;
+  grid-template-columns: minmax(0, 300px) minmax(0, 380px);
+  gap: 40px clamp(48px, 9vw, 120px);
   align-items: start;
   margin-top: 28px;
 }
 
 .contact-socials {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -2371,11 +2372,285 @@ html:has(.pin-dialog[open]) {
 }
 
 @media (max-width: 480px) {
-  .contact-socials {
-    grid-template-columns: 1fr;
-  }
-
   .contact-link-go {
     display: none;
   }
+}
+
+/* ── Formula Student timeline ────────────────────────────────── */
+
+.tl {
+  --tl-accent: #1d5fbf;
+  --tl-off: rgba(0, 0, 0, 0.22);
+  list-style: none;
+  margin: 44px 0 0;
+  padding: 0;
+}
+
+[data-theme="dark"] .tl {
+  --tl-accent: #7fb0ff;
+  --tl-off: rgba(255, 255, 255, 0.24);
+}
+
+.tl > li {
+  display: grid;
+  grid-template-columns: 84px 36px minmax(0, 1fr);
+  grid-template-areas: "date rail body";
+}
+
+.tl-date {
+  grid-area: date;
+  padding-top: 3px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--tl-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.tl-rail {
+  grid-area: rail;
+  position: relative;
+}
+
+/* Line segment for this row */
+.tl-rail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--tl-accent);
+}
+
+/* Dot for this row */
+.tl-rail::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--tl-accent);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+
+.tl > li:first-child .tl-rail::before { top: 12px; }
+.tl > li:last-child .tl-rail::before { bottom: auto; height: 12px; }
+
+.tl-body {
+  grid-area: body;
+  min-width: 0;
+  padding: 0 0 34px 10px;
+}
+
+.tl-body h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--brand-color);
+}
+
+.tl-body p {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--brand-color);
+  opacity: 0.78;
+  text-wrap: pretty;
+}
+
+/* Phase rows: a square marker and a bigger heading */
+.tl-phase .tl-rail::after {
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  border-radius: 4px;
+}
+
+.tl-step {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tl-accent);
+}
+
+.tl-phase h3 {
+  margin: 0 0 6px;
+  font-size: clamp(20px, 2.2vw, 24px);
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  color: var(--brand-color);
+  text-wrap: balance;
+}
+
+/* Now: solid line up to the dot, dashed after it */
+.tl .is-now .tl-rail::before {
+  background:
+    linear-gradient(var(--tl-accent), var(--tl-accent)) top / 2px 14px no-repeat,
+    repeating-linear-gradient(to bottom, var(--tl-off) 0 6px, transparent 6px 12px);
+}
+
+.tl .is-now .tl-rail::after {
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  animation: tl-pulse 2.4s var(--ease-out) infinite;
+}
+
+@keyframes tl-pulse {
+  0% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 4px color-mix(in srgb, var(--tl-accent) 50%, transparent); }
+  100% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 14px transparent; }
+}
+
+.is-now .tl-body {
+  margin: -16px 0 40px 10px;
+  padding: 18px 22px 8px;
+  border-radius: 14px;
+  background: var(--section-alt-bg);
+}
+
+.is-now .tl-body > h4 { font-size: 18px; }
+
+/* Still to come: dashed line, hollow dots */
+.tl .is-next .tl-rail::before {
+  background: repeating-linear-gradient(to bottom, var(--tl-off) 0 6px, transparent 6px 12px);
+}
+
+.tl .is-next .tl-rail::after {
+  background: var(--bg);
+  border: 2px solid var(--tl-off);
+}
+
+.tl .is-next .tl-date,
+.tl .is-next .tl-step {
+  color: var(--brand-color);
+  opacity: 0.7;
+}
+
+.tl .is-goal .tl-rail::after {
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  border-color: var(--tl-accent);
+}
+
+/* Subsystem status inside the "now" block */
+.tl-status {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.tl-status li {
+  padding: 13px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .tl-status li {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.tl-status-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.tl-status strong {
+  font-size: 14px;
+  color: var(--brand-color);
+}
+
+.tl-status p { font-size: 13px; }
+
+.tl-state {
+  flex: none;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brand-color);
+  background: rgba(0, 0, 0, 0.07);
+}
+
+[data-theme="dark"] .tl-state { background: rgba(255, 255, 255, 0.08); }
+
+.tl-state--on {
+  color: var(--tl-accent);
+  background: color-mix(in srgb, var(--tl-accent) 13%, transparent);
+}
+
+[data-theme="dark"] .tl-state--on {
+  background: color-mix(in srgb, var(--tl-accent) 16%, transparent);
+}
+
+@media (max-width: 600px) {
+  .tl { margin-top: 32px; }
+
+  .tl > li {
+    grid-template-columns: 24px minmax(0, 1fr);
+    grid-template-areas: "rail date" "rail body";
+  }
+
+  .tl-rail { grid-row: 1 / 3; }
+
+  .tl-date {
+    padding: 2px 0 2px 12px;
+    text-align: left;
+  }
+
+  .tl-date:empty { padding: 0; }
+
+  .tl-body { padding-left: 12px; }
+
+  .is-now .tl-body {
+    margin: 6px 0 36px 8px;
+    padding: 16px 16px 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tl .is-now .tl-rail::after { animation: none; }
+}
+
+/* Joining goes through school or Instagram, not email */
+.fs-section > .contact-join {
+  max-width: 620px;
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--brand-color);
+}
+
+.contact-join a {
+  font-weight: 700;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Small print at the end of the contact page */
+.contact-legal {
+  padding-top: 40px;
+  padding-bottom: 56px;
+}
+
+.contact-legal > p {
+  margin: 0 0 10px;
+  max-width: 72ch;
+  font-size: 12.5px;
+  line-height: 1.6;
 }
