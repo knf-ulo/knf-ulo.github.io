@@ -2213,7 +2213,7 @@ html:has(.pin-dialog[open]) {
   display: grid;
   grid-template-columns: minmax(0, 300px) minmax(0, 380px);
   gap: 40px clamp(48px, 9vw, 120px);
-  align-items: start;
+  align-items: center;
   margin-top: 28px;
 }
 
